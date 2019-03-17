@@ -1,13 +1,18 @@
-## 1. 已完成系列
+## 已完成系列
 
-- [x] [设计模式手册](#3-设计模式手册)
-- [x] [Webpack4渐进式教程](#4-webpack4渐进式教程)
+- [x] [设计模式手册](#设计模式手册)
+- [x] [Webpack4渐进式教程](#webpack4渐进式教程)
 
-## 2. 规划中系列
+## 进行中系列
 
 - [ ] Hexo主题开发教程
+- [ ] [前端知识体系(以面试为目的)](#前端知识体系)
 
-## 3. 设计模式手册
+## 前端知识体系
+
+- 谈谈promise/async/await的执行顺序与V8引擎的BUG: [https://godbmw.com/passages/2018-05-29-promise-async-await-order/](https://godbmw.com/passages/2018-05-29-promise-async-await-order/)
+
+## 设计模式手册
 
 > 每种设计模式基本都用`ES6`和`Python`进行了实现，选取的例子也都是最典型的应用（避免长篇大论）。
 
@@ -28,7 +33,7 @@
 15. 备忘录模式: [https://godbmw.com/passages/2019-01-26-memento-pattern/](https://godbmw.com/passages/2019-01-26-memento-pattern/)
 16. 模板模式: [https://godbmw.com/passages/2019-01-31-template-pattern/](https://godbmw.com/passages/2019-01-31-template-pattern/)
 
-## 4. Webpack4渐进式教程
+## Webpack4渐进式教程
 
 > 配套代码地址：[https://github.com/dongyuanxin/webpack-demos](https://github.com/dongyuanxin/webpack-demos)
 
