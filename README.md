@@ -6,11 +6,16 @@
 ## 进行中系列
 
 - [ ] Hexo主题开发教程
-- [ ] [前端知识体系(以面试为目的)](#前端知识体系)
+- [ ] [前端面试手记](#前端面试手记)
 
-## 前端知识体系
+## 前端面试手记
 
-- 谈谈promise/async/await的执行顺序与V8引擎的BUG: [https://godbmw.com/passages/2018-05-29-promise-async-await-order/](https://godbmw.com/passages/2018-05-29-promise-async-await-order/)
+- JavaScript篇
+  - [谈谈promise/async/await的执行顺序与V8引擎的BUG](https://godbmw.com/passages/2018-05-29-promise-async-await-order/): 再谈一道网上泛滥的面试题和它当下真正正确的答案
+  - [前端面试中常考的源码实现](https://godbmw.com/passages/2019-03-18-interview-js-code/): call/apply/bind、完美的深拷贝函数、数据双向绑定、instanceof原理实现
+- CSS篇
+  - [Flex上手与实战](https://godbmw.com/passages/2019-03-20-css3-flex/): CSS3的核心布局方式
+  - [你了解css3的nth-child吗](https://godbmw.com/passages/2019-03-19-css3-nth-child/): 通过数学运算选定指定范围的子元素集合
 
 ## 设计模式手册
 
