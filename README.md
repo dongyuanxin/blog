@@ -39,6 +39,8 @@
 14. 解释器模式: [https://godbmw.com/passages/2019-01-25-interpreter-pattern/](https://godbmw.com/passages/2019-01-25-interpreter-pattern/)
 15. 备忘录模式: [https://godbmw.com/passages/2019-01-26-memento-pattern/](https://godbmw.com/passages/2019-01-26-memento-pattern/)
 16. 模板模式: [https://godbmw.com/passages/2019-01-31-template-pattern/](https://godbmw.com/passages/2019-01-31-template-pattern/)
+17. 工厂模式: [https://godbmw.com/passages/2019-03-31-factory-pattern/](https://godbmw.com/passages/2019-03-31-factory-pattern/)
+18. 抽象工厂模式: [https://godbmw.com/passages/2019-04-01-abstract-factory-pattern/](https://godbmw.com/passages/2019-04-01-abstract-factory-pattern/)
 
 ## Webpack4渐进式教程
 
