@@ -1,24 +1,24 @@
 ## 已完成系列
 
 - [x] [设计模式手册](#设计模式手册)
-- [x] [Webpack4渐进式教程](#webpack4渐进式教程)
+- [x] [Webpack4 渐进式教程](#webpack4渐进式教程)
 
 ## 进行中系列
 
-- [ ] Hexo主题开发教程
+- [ ] Hexo 主题开发教程
 - [ ] [前端面试手记](#前端面试手记)
 
 ## 前端面试手记
 
-- JavaScript篇
-  - [JavaScript基础知识梳理(上)](https://godbmw.com/passages/2019-03-26-javascript-first/): 普通函数和箭头函数的`this`、原始数据类型及其判断和转化方法、JS事件模型......
-  - [JavaScript基础知识梳理(下)](https://godbmw.com/passages/2019-03-27-javascript-second/): 实现ES5继承的4种方法、原型和原型链、闭包的理解和分析、Event Loop......
-  - [ES6重难点整理](https://godbmw.com/passages/2019-04-09-es6/): let和const、Set和Map、Generator和yield、Promise、async/await介绍、Proxy代理器......
-  - [谈谈promise/async/await的执行顺序与V8引擎的BUG](https://godbmw.com/passages/2018-05-29-promise-async-await-order/): 再谈一道网上泛滥的面试题和它当下真正正确的答案
-  - [前端面试中常考的源码实现](https://godbmw.com/passages/2019-03-18-interview-js-code/): call/apply/bind、完美的深拷贝函数、数据双向绑定、instanceof原理实现
-- CSS篇
-  - [Flex上手与实战](https://godbmw.com/passages/2019-03-20-css3-flex/): CSS3的核心布局方式
-  - [你了解css3的nth-child吗](https://godbmw.com/passages/2019-03-19-css3-nth-child/): 通过数学运算选定指定范围的子元素集合
+- JavaScript 篇
+  - [JavaScript 基础知识梳理(上)](https://godbmw.com/passages/2019-03-26-javascript-first/): 普通函数和箭头函数的`this`、原始数据类型及其判断和转化方法、JS 事件模型......
+  - [JavaScript 基础知识梳理(下)](https://godbmw.com/passages/2019-03-27-javascript-second/): 实现 ES5 继承的 4 种方法、原型和原型链、闭包的理解和分析、Event Loop......
+  - [ES6 重难点整理](https://godbmw.com/passages/2019-04-09-es6/): let 和 const、Set 和 Map、Generator 和 yield、Promise、async/await 介绍、Proxy 代理器......
+  - [谈谈 promise/async/await 的执行顺序与 V8 引擎的 BUG](https://godbmw.com/passages/2018-05-29-promise-async-await-order/): 再谈一道网上泛滥的面试题和它当下真正正确的答案
+  - [前端面试中常考的源码实现](https://godbmw.com/passages/2019-03-18-interview-js-code/): call/apply/bind、完美的深拷贝函数、数据双向绑定、instanceof 原理实现
+- CSS 篇
+  - [Flex 上手与实战](https://godbmw.com/passages/2019-03-20-css3-flex/): CSS3 的核心布局方式
+  - [你了解 css3 的 nth-child 吗](https://godbmw.com/passages/2019-03-19-css3-nth-child/): 通过数学运算选定指定范围的子元素集合
 
 ## 设计模式手册
 
@@ -43,7 +43,7 @@
 17. 工厂模式: [https://godbmw.com/passages/2019-03-31-factory-pattern/](https://godbmw.com/passages/2019-03-31-factory-pattern/)
 18. 抽象工厂模式: [https://godbmw.com/passages/2019-04-01-abstract-factory-pattern/](https://godbmw.com/passages/2019-04-01-abstract-factory-pattern/)
 
-## Webpack4渐进式教程
+## Webpack4 渐进式教程
 
 > 配套代码地址：[https://github.com/dongyuanxin/webpack-demos](https://github.com/dongyuanxin/webpack-demos)
 
