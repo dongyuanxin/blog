@@ -159,28 +159,28 @@ console.log("\u03a3"); // Σ
 
 #### 3.4.6 Object 类型
 
-Object实例都有以下属性：
+Object 实例都有以下属性：
 
 - constructor: 指向创建对象的函数
 - hasOwnProperty
-- obj1.isPrototypeOf(obj2): obj1 是不是在obj2的原型链上
-- propertyIsEnumerable(propName): propName能否用for-in枚举
+- obj1.isPrototypeOf(obj2): obj1 是不是在 obj2 的原型链上
+- propertyIsEnumerable(propName): propName 能否用 for-in 枚举
 
 关于 `isPrototypeOf`:
 
 ```javascript
 function Demo() {}
-var o = {}
+var o = {};
 
-var demo = new Demo()
-console.log(o.isPrototypeOf(demo)) // output: false
+var demo = new Demo();
+console.log(o.isPrototypeOf(demo)); // output: false
 
 // 将o放在demo实例的原型链上
-demo.__proto__ = Demo.prototype = o
-console.log(o.isPrototypeOf(demo)) // output: true
+demo.__proto__ = Demo.prototype = o;
+console.log(o.isPrototypeOf(demo)); // output: true
 ```
 
-对于BOM、DOM等宿主环境提供的对象，可能并不继承Object，不具有以上通性。
+对于 BOM、DOM 等宿主环境提供的对象，可能并不继承 Object，不具有以上通性。
 
 ### 3.5 操作符
 
@@ -189,7 +189,7 @@ console.log(o.isPrototypeOf(demo)) // output: true
 - `~`: 按位非。`~110 => 001`
 - `&`: 按位与。
 - `|`: 按位或。
-- `^`: 异或操作。位数相同返回0，不同返回1。
+- `^`: 异或操作。位数相同返回 0，不同返回 1。
 - `<<`: 左移
 - `>>`: 默认情况，有符号右移，保留符号位（符合正常逻辑）
 - `>>>`: 无符号右移，在移动时候忽略符号位。
@@ -203,11 +203,270 @@ console.log(o.isPrototypeOf(demo)) // output: true
 3、**逗号操作符**
 
 ```javascript
-var num1 = 1, num2 = 2, num3 = 3 // 多变量声明
+var num1 = 1,
+  num2 = 2,
+  num3 = 3; // 多变量声明
 
-var num = (3, 2, 1) // 从右边开始解析，返回 1
-console.log(num) // output: 1
+var num = (3, 2, 1); // 从右边开始解析，返回 1
+console.log(num); // output: 1
 ```
 
 ### 3.6 语句
 
+#### 3.6.5 for-in 语句
+
+精准迭代，枚举对象属性。但是效率很低，而且输出的属性名的顺序不确定。
+
+在执行前，需要检测对象是否为 `null` 或者 `undefined`，否则 es3 会报错。
+
+#### 3.6.6 label 语句
+
+与`break` 和 `continue` 联合使用，主要用于多层嵌套循环的流程控制。
+
+配合 `break`，直接跳出指定的 `label` ：
+
+```javascript
+var num = 0;
+outermost: for (var i = 0; i < 10; ++i) {
+  for (var j = 0; j < 10; ++j) {
+    if (i === 5 && j === 5) {
+      // i, j为5的时候，结束循环
+      break outermost;
+    }
+    ++num;
+  }
+}
+console.log(num); // 55
+```
+
+配合 `continue`，直接跳出指定的 `label` ：
+
+```javascript
+var num = 0;
+outermost: for (var i = 0; i < 10; ++i) {
+  for (var j = 0; j < 10; ++j) {
+    if (i === 5 && j === 5) {
+      continue outermost;
+    }
+    ++num;
+  }
+}
+console.log(num); // 95
+```
+
+开启调试后会发现，当 i 和 j 为 5 的时候，跳到了 outermost，并且保持了 i 和 j 的变量值。
+
+外层循环导致 i 变为 6，j 清零。
+
+#### 3.6.8 with 语句
+
+设置代码作用域到指定对象中，会导致性能下降。
+
+```javascript
+const obj = {
+  a: 1
+};
+
+with (obj) {
+  console.log(a); // 1
+}
+```
+
+### 3.7 函数
+
+`arguments` 是类数组对象，严格模式下不能重写或者重新定义其中的值。
+
+`arguments.callee` 指向函数自身，用于编写递归函数。
+
+**注意**：js 的函数没有重载。ts 可以重载，但是也只是多类型声明，不符合传统意义的函数重载。
+
+## 第四章 变量、作用域和内存问题
+
+### 4.1 基本类型和引用类型的值
+
+#### 4.1.2 赋值
+
+复制函数：
+
+```javascript
+var obj1 = new Object(); // obj1 保存的是副本，不过这个副本是指向实例的一个指针
+var obj2 = obj1;
+```
+
+ECMAScript 中所有函数的参数都是按值传递，对于复杂类型，副本就是指向它的指针。
+
+#### 4.1.4 检测类型
+
+基本数据类型：`typeof`；对象类型检测：`instanceof`
+
+### 4.2 执行环境和作用域
+
+延长作用域链的情景：
+
+1. `try-catch`中的`catch`：作用域链前端新增错误对象
+2. `with`：作用域链前端新增指定对象
+3. 函数闭包
+
+### 4.3 垃圾回收(GC)
+
+#### 4.3.1 标记清除和引用计数
+
+浏览器的实现有两种：
+
+1. **标记清除**：所有变量打标记；去掉环境中变量的标记，以及被环境中变量引用变量的标记；之后，清除还有标记的变量。
+2. **引用计数**：跟踪每个变量引用次数，被引用的变量就加 1；如果此变量又取了另一个变量，减 1。
+
+```javascript
+const value = 1; // 引用0
+const copy = value; // 引用+1
+const obj = {
+  copy // 引用 + 1
+};
+obj.copy = null; // 引用 -1
+// 最后，引用次数为1
+```
+
+引用计数无法处理“循环引用”的情况，例如：
+
+```javascript
+function problem() {
+  const obja = {},
+    objb = {};
+
+  obja.prop = objb; // objb的引用次数和obja的引用次数都+1
+  objb.prop = obja; // objb的引用次数和obja的引用次数再+1
+  // obja 和 obj2 的引用次数均是2
+  // 变量永远不会被清除，造成内存泄漏
+}
+```
+
+#### 4.3.3 性能优化
+
+在**优化性能问题**上，IE6 根据固定的内存分配量来触发 gc。但是如果脚本中声明了很多变量，并且都没有被释放，那么一直会达到触发标准，gc 会高频率触发，效率低下。
+
+es7 做出了改进：临界值是动态计算的。如果一次垃圾回收的内存量低于 15%，那么临界值会翻倍；如果高于 85%，重置临界值。
+
+#### 4.3.4 管理内存
+
+解除引用：不使用的变量，设置为`null`。
+
+解除引用不意味变量内存回收，而是让其脱离执行环境，方便下次 gc 回收。
+
+## 5. 引用类型
+
+ECMAScript 是面向对象语言，但不是传统的面向对象。提供构造函数，专门对接传统对象编程。
+
+### 5.1 Object 类型
+
+`new Object()` 和 `{}` 声明等效。
+
+### 5.2 Array 类型
+
+创建有`Array`和 `[]`2 种方式。
+
+`length` 是可读写的，置 0 可以清空数组。
+
+#### 5.2.1 数组检测
+
+请用 `Array.isArray` 检测数组。`instanceof` 不适用于网页包含多个框架，2 个运行环境，从一个向另一个传入数组构造函数，严格意义上并不相等。
+
+```html
+<script>
+  const { frames } = window;
+  const length = frames.length;
+  xArray = frames[length - 1].Array;
+  const arr = new Array();
+  console.log(arr instanceof xArray); // false
+</script>
+```
+
+#### 5.2.3 栈和队列
+
+- 栈：`push` && `pop`
+- 队列：`push` && `shift`
+
+#### 5.2.6 操作方法
+
+concat：参数会被自动展开
+
+```javascript
+const colors = [1];
+const colors2 = colors.concat(2, [3, 4]); // [1, 2, 3, 4]
+```
+
+slice(star, end): 切片，返回新数组。
+
+splice(start, count, ...items):
+
+- 删除：不需要第三个参数
+- 插入：第二参数置 0
+- 替换：第二个和第三个参数要用
+
+### 5.3 Date 类型
+
+Date.now() 和 new Date().gewNow() 等价。
+
+Date.parse(string): 返回string代表的日期的毫秒数。`年/月/日`，请不要使用`-`连接！
+
+Date实例可以直接比较大小，因为`valueOf`返回毫秒数。
+
+### 5.4 RegExp 类型
+
+不推荐 `new RegExp(string)` 来声明正则，因为 string 是字符串，元字符需要双重转义。比如`\n`，就是`\\n`。
+
+每个实例拥有以下属性：
+- global：g
+- ignoreCase: i
+- multiline: m
+- **lastIndex**: 搜索下一匹配项的字符位置
+- **source**: 正则的字符串表示
+
+### 5.5 Function 类型
+
+代码求值时，js引擎会将声明函数提升到源码顶部。
+
+`arguments`上重要属性：
+- length：参数长度
+- callee: 函数自身引用
+
+函数上重要属性：
+- caller: 调用此函数的函数引用。全局访问返回null
+- length：函数希望接受的参数个数（不算默认参数）
+
+```javascript
+function outer() {
+	inner()
+}
+function inner(a, b = 1) {
+  console.log(arguments.callee.caller === outer)
+}
+
+outer() // true
+inner.length // 2 - 1 = 1
+```
+
+函数prototype属性无法枚举，不能用for-in枚举
+- 可以使用 `Object.getOwnPropertyNames` ，返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
+- 可以使用 `Reflect.ownKeys`，返回包括所有自身属性的属性名的数组
+
+### 5.6 基本包装类型
+
+num.toFixed(位数)：自动舍入，返回字符串。
+
+num.toExponential(位数)：转化为科学计数法，返回字符串。
+
+String.fromCharCode(...charcodes): 将字符编码转化为字符串。
+
+String.charCodeAt(index): 将index的字符转化为字符编码。
+
+### 5.7 单体内置对象
+
+随机整数数生成：
+
+```javascript
+// [start, end]
+function randomInt (start, end) {
+  const times = end - start + 1
+  return Math.floor(Math.random() * times + start)
+}
+```
