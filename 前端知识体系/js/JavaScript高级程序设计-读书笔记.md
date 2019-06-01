@@ -156,3 +156,58 @@ console.log(isNaN(validNum)); // output: false
 console.log("\x41"); // A
 console.log("\u03a3"); // Σ
 ```
+
+#### 3.4.6 Object 类型
+
+Object实例都有以下属性：
+
+- constructor: 指向创建对象的函数
+- hasOwnProperty
+- obj1.isPrototypeOf(obj2): obj1 是不是在obj2的原型链上
+- propertyIsEnumerable(propName): propName能否用for-in枚举
+
+关于 `isPrototypeOf`:
+
+```javascript
+function Demo() {}
+var o = {}
+
+var demo = new Demo()
+console.log(o.isPrototypeOf(demo)) // output: false
+
+// 将o放在demo实例的原型链上
+demo.__proto__ = Demo.prototype = o
+console.log(o.isPrototypeOf(demo)) // output: true
+```
+
+对于BOM、DOM等宿主环境提供的对象，可能并不继承Object，不具有以上通性。
+
+### 3.5 操作符
+
+1、**位操作**
+
+- `~`: 按位非。`~110 => 001`
+- `&`: 按位与。
+- `|`: 按位或。
+- `^`: 异或操作。位数相同返回0，不同返回1。
+- `<<`: 左移
+- `>>`: 默认情况，有符号右移，保留符号位（符合正常逻辑）
+- `>>>`: 无符号右移，在移动时候忽略符号位。
+
+正因为移动时候忽略符号位，因此例如 -64 = 111111..11100000，负数的补码会被当做正数的二进制码。
+
+2、**布尔操作**
+
+一般直接使用 `!!` 进行转化。
+
+3、**逗号操作符**
+
+```javascript
+var num1 = 1, num2 = 2, num3 = 3 // 多变量声明
+
+var num = (3, 2, 1) // 从右边开始解析，返回 1
+console.log(num) // output: 1
+```
+
+### 3.6 语句
+
