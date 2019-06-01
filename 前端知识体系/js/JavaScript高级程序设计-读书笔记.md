@@ -406,15 +406,16 @@ splice(start, count, ...items):
 
 Date.now() 和 new Date().gewNow() 等价。
 
-Date.parse(string): 返回string代表的日期的毫秒数。`年/月/日`，请不要使用`-`连接！
+Date.parse(string): 返回 string 代表的日期的毫秒数。`年/月/日`，请不要使用`-`连接！
 
-Date实例可以直接比较大小，因为`valueOf`返回毫秒数。
+Date 实例可以直接比较大小，因为`valueOf`返回毫秒数。
 
 ### 5.4 RegExp 类型
 
 不推荐 `new RegExp(string)` 来声明正则，因为 string 是字符串，元字符需要双重转义。比如`\n`，就是`\\n`。
 
 每个实例拥有以下属性：
+
 - global：g
 - ignoreCase: i
 - multiline: m
@@ -423,30 +424,33 @@ Date实例可以直接比较大小，因为`valueOf`返回毫秒数。
 
 ### 5.5 Function 类型
 
-代码求值时，js引擎会将声明函数提升到源码顶部。
+代码求值时，js 引擎会将声明函数提升到源码顶部。
 
 `arguments`上重要属性：
+
 - length：参数长度
 - callee: 函数自身引用
 
 函数上重要属性：
-- caller: 调用此函数的函数引用。全局访问返回null
+
+- caller: 调用此函数的函数引用。全局访问返回 null
 - length：函数希望接受的参数个数（不算默认参数）
 
 ```javascript
 function outer() {
-	inner()
+  inner();
 }
 function inner(a, b = 1) {
-  console.log(arguments.callee.caller === outer)
+  console.log(arguments.callee.caller === outer);
 }
 
-outer() // true
-inner.length // 2 - 1 = 1
+outer(); // true
+inner.length; // 2 - 1 = 1
 ```
 
-函数prototype属性无法枚举，不能用for-in枚举
-- 可以使用 `Object.getOwnPropertyNames` ，返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括Symbol值作为名称的属性）组成的数组。
+函数 prototype 属性无法枚举，不能用 for-in 枚举
+
+- 可以使用 `Object.getOwnPropertyNames` ，返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
 - 可以使用 `Reflect.ownKeys`，返回包括所有自身属性的属性名的数组
 
 ### 5.6 基本包装类型
@@ -457,16 +461,16 @@ num.toExponential(位数)：转化为科学计数法，返回字符串。
 
 String.fromCharCode(...charcodes): 将字符编码转化为字符串。
 
-String.charCodeAt(index): 将index的字符转化为字符编码。
+String.charCodeAt(index): 将 index 的字符转化为字符编码。
 
 ### 5.7 单体内置对象
 
-随机整数数生成：
+随机整数生成：
 
 ```javascript
 // [start, end]
-function randomInt (start, end) {
-  const times = end - start + 1
-  return Math.floor(Math.random() * times + start)
+function randomInt(start, end) {
+  const times = end - start + 1;
+  return Math.floor(Math.random() * times + start);
 }
 ```
