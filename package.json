@@ -6,7 +6,9 @@
   "dependencies": {
     "prettier": "^1.17.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^2.3.0"
+  },
   "scripts": {
     "check": "./node_modules/.bin/prettier --check ./**/*.md",
     "lint": "./node_modules/.bin/prettier --write ./**/*.md"
@@ -20,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/dongyuanxin/blog/issues"
   },
-  "homepage": "https://github.com/dongyuanxin/blog#readme"
+  "homepage": "https://github.com/dongyuanxin/blog#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
 }
