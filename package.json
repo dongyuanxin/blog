@@ -22,10 +22,5 @@
   "bugs": {
     "url": "https://github.com/dongyuanxin/blog/issues"
   },
-  "homepage": "https://github.com/dongyuanxin/blog#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  }
+  "homepage": "https://github.com/dongyuanxin/blog#readme"
 }
