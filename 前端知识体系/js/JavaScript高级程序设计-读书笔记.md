@@ -474,3 +474,170 @@ function randomInt(start, end) {
   return Math.floor(Math.random() * times + start);
 }
 ```
+
+## 第六章 面向对象的程序设计
+
+ECMA-62 对象定义：无序属性集合，其属性可以包括基本值、对象和函数。
+
+### 6.1 理解对象
+
+ECMA 有 2 种属性：数据属性和访问器属性。它们可以通过 `Object.getOwnPropertyDescriptor` 来读取。
+
+**1.数据属性**
+
+通过 `Object.defineProperty(对象, 属性名, {属性: 值})` 来修改，可修改的属性是：configurable(是否可通过`delete`删除)、enumerable(能否 for-in 循环)、writable(能否修改)、value。
+
+可以多次调用 api 修改上述属性，除了将 `configurable` 设置为 false。
+
+**2.访问器属性**
+
+访问器属性不包含数据值，也是通过 `Object.defineProperty(对象, 属性名, {属性: 值})` 来修改。
+
+可修改的属性是：configurable、enumerable、get、set。其中，只指定 get 不指定 set，那么就是不可写；反过来，不能读。
+
+### 6.2 创建对象
+
+#### 6.2.1 理解原型对象
+
+原型模式中，实例的 `__proto__` 指向构造函数的 `prototype`，因此，`构造函数.prototype.isPrototypeOf(实例)`返回 true。
+
+因为原型链有下端“屏蔽”上端的机制，可以通过逐步 `delete` 来暴露上端属性。
+
+#### 6.2.2 原型与 `in` 操作符
+
+如果对象可以访问给定属性，那么 `in` 返回 true。
+
+```javascript
+function Person() {}
+Person.prototype.name = "student";
+const person = new Person();
+console.log("name" in person); // output
+```
+
+检测 `prototype` 是否位于 原型链上，而不位于实例上。
+
+```javascript
+function hasPropertyInPrototype(object, prototype) {
+  // hasOwnProperty 是否位于实例上
+  return prototype in object && !object.hasOwnProperty(prototype);
+}
+```
+
+#### 6.2.3 自定义原型
+
+(构造)函数的`constructor` 属性是自身，所以重写`prototype`的时候，需要注意：
+
+```javascript
+function Person() {}
+Person.prototype = {
+  name: "dongyuanxin"
+};
+Object.defineProperty(Person.prototype, "constructor", {
+  enumerable: false, // Person.prototype.constructor 是不可枚举的
+  value: Person
+});
+```
+
+#### 6.2.4 动态原型
+
+为了对应 OO 编程习惯，prototype 上属性在访问时动态创建：
+
+```javascript
+function Person() {
+  this.name = "person";
+
+  if (typeof this.sayHello !== "function") {
+    Person.prototype.sayHello = function() {
+      console.log(`Hello, I'm ${this.name}`);
+    };
+  }
+}
+```
+
+#### 6.2.6 稳妥构造函数
+
+经常使用，尤其是在对原生对象做拓展时候，而且不能影响原有原型链。
+
+```javascript
+function PowerDate() {
+  const date = new Date();
+  date.format = () => {
+    const year = addZeroStr(date.getFullYear()),
+      month = addZeroStr(date.getMonth() + 1),
+      day = addZeroStr(date.getDate()),
+      hour = addZeroStr(date.getHours()),
+      minute = addZeroStr(date.getMinutes()),
+      second = addZeroStr(date.getSeconds());
+    return `${year}/${month}/${day} ${hour}:${minute}:${second}`;
+  };
+  // 可以new调用，因为return重置了返回值
+  return date;
+}
+```
+
+### 6.3 继承
+
+- 接口继承：继承方法签名
+- 实现继承：继承实际方法
+
+常见四种方法：[JavaScript 基础知识梳理-下](https://github.com/dongyuanxin/blog/blob/master/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/js/JavaScript%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-%E4%B8%8B.md)
+
+## 第七章 函数表达式
+
+### 7.2 闭包
+
+闭包是指：有权访问另一个函数作用域中的变量的函数。作用域得到了延长。
+
+一个经典问题：
+
+```javascript
+function createFunction() {
+  var result = new Array();
+
+  for (var i = 0; i < 10; ++i) {
+    result[i] = function() {
+      return i;
+    };
+  }
+
+  return result;
+}
+```
+
+调用 result 中的函数，返回值均是 10。这是因为 `var` 不是块级作用域，闭包声明造成了内函数可以访问 `createFunction` 的作用域，并且在结束函数后，变量`i`的生命被延长了下来。例如，当调用 `result[0]` 的时候，就会访问并且返回 `createFunction` 中的 变量`i`的值。
+
+如果将 `var` 换成 `let`，则不存在这个问题。虽然变量`i`生命被延长，也属于 `createFunction`作用域，但是`let`本身是“**块级作用域**”。也就是说，闭包中返回的`i`是当前循环下的`i`，没有发生污染。
+
+### 7.3 模仿块级作用域
+
+下面写法内存占用低，标记清除的`gc`在函数运行完，检测到不被使用，会立即销毁作用域链。
+
+```javascript
+(function() {
+  // ...
+})();
+```
+
+### 7.4 私有变量
+
+利用闭包，可以很巧妙地实现静态私有变量、私有函数方法等。
+
+```javascript
+(function() {
+  var name = ""; // 静态私有变量
+
+  return {
+    name() {
+      return name + "123";
+    }
+  };
+})();
+```
+
+## 第八章 BOM
+
+### 8.1 window 对象
+
+双重角色：js 访问浏览器的 api + ECMAScript 规定的 global 对象。
+
+#### 8.1.1 全局作用域
