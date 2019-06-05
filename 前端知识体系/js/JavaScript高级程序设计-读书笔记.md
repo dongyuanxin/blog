@@ -641,3 +641,125 @@ function createFunction() {
 双重角色：js 访问浏览器的 api + ECMAScript 规定的 global 对象。
 
 #### 8.1.1 全局作用域
+
+定义在全局的变量不能被 delete, 定义在 window 上的属性可以被 delete。
+
+#### 8.1.2 窗口关系及框架
+
+对于 window 的`frames`，为了保证兼容性，请使用：`top.frames`。因为`top`是绝对的。
+
+除了`top`外，还有`parent`，在没有任何框架情况下，`top === window`。
+
+最后，还有`self`。在 sw 中，常用 self 访问 window 上的 api。
+
+#### 8.1.3 窗口位置
+
+跨浏览器取得窗口左边、上边的位置：
+
+```javascript
+let leftPos =
+  typeof window.screenLeft === "number" ? window.screenLeft : window.screenX;
+let topPos =
+  typeof window.screenTop === "number" ? window.screenTop : window.screenY;
+```
+
+此外，还有`window.moveTo(x, y)` 和 `window.moveBy(offsetX, offsetY)`两个方法移动位置。但是默认是禁用的。
+
+#### 8.1.4 窗口大小
+
+窗口大小无法确定，但是可以跨浏览器获得页面视图大小：
+
+```javascript
+let pageWidth = window.innerWidth,
+  pageHeight = window.innerHeight;
+
+if (typeof pageWidth !== "number") {
+  if (document.compatMode === "CSS1Compat") {
+    // 是否是标准模式
+    pageWidth = document.documentElement.clientWidth;
+    pageHeight = document.documentElement.clientHeight;
+  } else {
+    // 是否是混杂模式
+    pageWidth = document.body.clientWidth;
+    pageHeight = document.body.clientHeight;
+  }
+}
+```
+
+此外，还有`window.resizeTo(width, height)` 和 `window.resize(offsetWidth, offsetHeight)`调整大小。但是默认是禁用的。
+
+#### 8.1.5 导航和打开窗口
+
+`window.open(href, windowName, paramsString)`: 最后一个参数形如 `height=400,width=10`。
+
+这里有同域限制，并且返回的指针指向新开窗口，可以使用以上被禁用的方法。
+
+对于一些浏览器插件，会禁用弹出，兼容代码如下：
+
+```javascript
+let blocked = false;
+try {
+  let wroxWin = window.open("http://baidu.com", "_blank");
+  if (!wroxWin) {
+    // 打开失败
+    blocked = true;
+  }
+} catch (error) {
+  // 插件禁止后，会报错
+  blocked = true;
+}
+```
+
+#### 8.1.7 系统对话框
+
+它们是浏览器决定的，是同步和模态的。显示的时候，会终止代码执行。
+
+### 8.2 location 对象
+
+location.href(最常用) 和 window.location 本质都是调用 location.assign()。
+
+除此之外，修改 location 上的其他属性，也可以改变当前加载的页面，比如 `location.hash='#setion'`
+
+以上方法，会在浏览器中生成新的历史记录。使用`location.replace()`方法，不会在浏览器中生成历史记录。
+
+location.reload(true)：强制重新加载。
+
+### 8.3 navigator 对象
+
+#### 8.3.1 检测插件
+
+`navigator.plugins` 存放插件信息：
+
+```javascript
+// 通用检测方法
+function hasPlugin(name = "") {
+  name = name.toLocaleLowerCase();
+  for (var i = 0; i < navigator.plugins.length; ++i) {
+    if (navigator.plugins[i].name.toLocaleLowerCase().indexOf(name) > -1) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+但由于 IE 浏览器的兼容，最好针对不同浏览器封装不同的插件检测方法。
+
+#### 8.3.2 注册处理程序
+
+google 支持 register​Protocol​Handler 自定义协议。比如打开`https://www.baidu.com`的控制台，在其中输入：
+
+```javascript
+// 理论上是这样，但是效果不好
+navigator.registerProtocolHandler(
+  "web+baidu",
+  "https://www.baidu.com/s?wd=%s",
+  "Baidu handler"
+);
+```
+
+### 8.5 history 对象
+
+history.go(): 任意跳转。数字代表前后跳转，字符串会自动找寻历史中最近的位置跳转。
+
+history.length: 保存历史记录的数量。
