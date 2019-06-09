@@ -7,11 +7,15 @@
     "prettier": "^1.17.1"
   },
   "devDependencies": {
-    "husky": "^2.3.0"
+    "gitalk": "^1.5.0",
+    "husky": "^2.3.0",
+    "vuepress": "^1.0.0-beta.2"
   },
   "scripts": {
     "check": "./node_modules/.bin/prettier --check ./**/*.md",
-    "lint": "./node_modules/.bin/prettier --write ./**/*.md"
+    "lint": "./node_modules/.bin/prettier --write ./**/*.md",
+    "dev": "./node_modules/.bin/vuepress dev .",
+    "build": "./node_modules/.bin/vuepress build ."
   },
   "repository": {
     "type": "git",
