@@ -2,6 +2,9 @@
 package-lock.json
 node_modules
 
+# vuepress 
+dist
+
 # 剑指offer刷题笔记
 剑指offer刷题笔记/index.js
 
