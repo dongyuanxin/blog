@@ -22,7 +22,7 @@ permalink: "2018-06-19-batch-edit-log"
 
 通过百度，发现通过如下命令可以修改：
 
-```shell
+```sh
 git commit --amend --author='名称 <邮箱>'
 ```
 
@@ -35,7 +35,7 @@ git commit --amend --author='名称 <邮箱>'
 
 **首先，我们创建`change.sh`脚本，并根据个人信息复制以下脚本**。
 
-```shell
+```sh
 #!/bin/sh
 
 git filter-branch --env-filter '

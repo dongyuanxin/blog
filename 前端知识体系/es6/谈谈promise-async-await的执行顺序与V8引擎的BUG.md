@@ -81,7 +81,7 @@ function async2() {
 
 输出结果如下所示：
 
-```ba
+```bash
 script start
 async2 end
 Promise
