@@ -7,30 +7,25 @@ import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 
 const commentID = 'vuepress-comment'
+let timer = null
 
 export default {
   mounted () {
-    renderComment(this.$frontmatter)
+    timer = setTimeout(() => {
+      needComment(this.$frontmatter) && renderComment(this.$frontmatter)
+    }, 1000)
+
     this.$router.afterEach((to, from) => {
       if (to && from && to.path === from.path) {
         return
       }
 
-      if (!needComment(this.$frontmatter)) {
-        return false
-      }
-
-      renderComment(this.$frontmatter)
+      needComment(this.$frontmatter) && renderComment(this.$frontmatter)
     })
-  },
+  }
 }
 
 function needComment (frontmatter) {
-  const contentDOM = document.querySelector('.page .content')
-  if (!contentDOM) {
-    return false
-  }
-
   if (frontmatter 
     && (
       frontmatter.comment === false 
@@ -43,11 +38,18 @@ function needComment (frontmatter) {
   return true
 }
 
-function renderComment (frontmatter = {}) {
+function renderComment (frontmatter) {
+  clearTimeout(timer)
+
   const parentDOM = document.querySelector('main.page')
   if (!parentDOM) {
-    setTimeout(() => renderComment(frontmatter), 100)
+    timer = setTimeout(() => renderComment(frontmatter), 200)
     return 
+  }
+
+  const last = document.querySelector(`#${commentID}`)
+  if (last) {
+    last.remove()
   }
 
   const commentContainerDOM = document.createElement('div')
@@ -63,7 +65,8 @@ function renderComment (frontmatter = {}) {
     id: frontmatter.commentid || frontmatter.permalink,      // Ensure uniqueness and length less than 50
     distractionFreeMode: false,  // Facebook-like distraction free mode
     labels: ['Gitalk', 'Comment'],
-    title: `「评论」${frontmatter.title}`
+    title: `「评论」${frontmatter.title}`,
+    body: `${frontmatter.title}：${window.location.origin}${window.location.pathname}`
   })
 
   gittalk.render(commentID)
