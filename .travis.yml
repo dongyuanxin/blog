@@ -13,4 +13,4 @@ after_success:
   - git config user.name $GIT_CONFIG_USERNAME
   - git config user.email $GIT_CONFIG_EMAIL
   - echo $GIT_TOKEN > ~/.ssh/id_rsa.pub
-  - sudo ./deploy.sh $GIT_REPO $GIT_BRANCH
+  - ./deploy.sh $GIT_REPO $GIT_BRANCH
