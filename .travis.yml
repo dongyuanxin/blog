@@ -1,3 +1,4 @@
+sudo: true
 branches:
   except:
   - gh-pages
@@ -9,7 +10,7 @@ install:
 script:
   - npm run check
 after_success:
-  - git config user.name "${GIT_CONFIG_USERNAME}"
-  - git config user.email "${GIT_CONFIG_EMAIL}"
-  - cat "${GIT_TOKEN}" > ~/.ssh/id_rsa.pub
-  - ./deploy.sh ${GIT_REPO} ${GIT_BRANCH}
+  - git config user.name $GIT_CONFIG_USERNAME
+  - git config user.email $GIT_CONFIG_EMAIL
+  - echo $GIT_TOKEN > ~/.ssh/id_rsa.pub
+  - ./deploy.sh $GIT_REPO $GIT_BRANCH
