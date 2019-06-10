@@ -1,5 +1,5 @@
 ---
-title: "每周分享·介绍"
+title: "专题介绍"
 date: "2019-06-10"
 permalink: "2019-06-10-weekly-share"
 ---
