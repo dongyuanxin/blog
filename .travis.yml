@@ -8,3 +8,8 @@ install:
   - npm install
 script:
   - npm run check
+after_success:
+  - git config user.name "${GIT_CONFIG_USERNAME}"
+  - git config user.email "${GIT_CONFIG_EMAIL}"
+  - cat "${GIT_TOKEN}" > ~/.ssh/id_rsa.pub
+  - ./deploy.sh ${GIT_REPO} ${GIT_BRANCH}
