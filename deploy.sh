@@ -11,8 +11,9 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# publish at $1, at branch $2
-git push -f "$1" master:"$2"
+git push -f "https://godbmw:$CODING_TOKEN@git.dev.tencent.com/godbmw/godbmw.coding.me.git" master:master
+
+git push -f "https://godbmw:$GITHUB_TOKEN@github.com/dongyuanxin/blog.git" master:gh-pages
 
 cd -
 
