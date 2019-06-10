@@ -13,5 +13,5 @@ after_success:
   - git config user.name $GIT_CONFIG_USERNAME
   - git config user.email $GIT_CONFIG_EMAIL
   - echo $GIT_TOKEN > ~/.ssh/id_rsa.pub
-  - printf 'git.code.oa.com\n    StrictHostKeyChecking no\n' > ~/.ssh/config
+  - printf 'Host git.dev.tencent.com git.code.oa.com\n    StrictHostKeyChecking no\n' > ~/.ssh/config
   - ./deploy.sh $GIT_REPO $GIT_BRANCH
