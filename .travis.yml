@@ -1,3 +1,4 @@
+sudo: true
 branches:
   except:
   - gh-pages
@@ -8,3 +9,5 @@ install:
   - npm install
 script:
   - npm run check
+after_success:
+  - ./deploy.sh
