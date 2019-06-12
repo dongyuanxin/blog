@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     require('./plugins/my-router'),
     [
-      require('./../../vuepress-plugin-comment/'),
+      require('vuepress-plugin-comment'),
       {
         choosen: 'gitalk', 
         options: {
