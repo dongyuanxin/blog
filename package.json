@@ -4,13 +4,12 @@
   "description": "集博客之精华而生的目录，已有前端知识体系梳理、设计模式手册、Webpack4教程，欢迎食用",
   "main": "index.js",
   "dependencies": {
-    "prettier": "^1.17.1"
-  },
-  "devDependencies": {
-    "gitalk": "^1.5.0",
+    "prettier": "^1.17.1",
+    "vuepress-plugin-comment": "^0.5.1",
     "husky": "^2.3.0",
     "vuepress": "^1.0.0-beta.2"
   },
+  "devDependencies": {},
   "scripts": {
     "check": "./node_modules/.bin/prettier --check ./**/*.md",
     "lint": "./node_modules/.bin/prettier --write ./**/*.md",
