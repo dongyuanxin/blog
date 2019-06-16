@@ -4,10 +4,10 @@
   "description": "集博客之精华而生的目录，已有前端知识体系梳理、设计模式手册、Webpack4教程，欢迎食用",
   "main": "index.js",
   "dependencies": {
-    "prettier": "^1.17.1",
-    "vuepress-plugin-comment": "^0.5.1",
     "husky": "^2.3.0",
-    "vuepress": "^1.0.0-beta.2"
+    "prettier": "^1.17.1",
+    "vuepress": "^1.0.0-beta.2",
+    "vuepress-plugin-comment": "^0.5.4"
   },
   "devDependencies": {},
   "scripts": {
