@@ -1,5 +1,5 @@
 ---
-title: "关于"
+title: "网站信息"
 permalink: "about"
 single: true
 ---

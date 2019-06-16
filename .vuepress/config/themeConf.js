@@ -16,8 +16,8 @@ module.exports = {
     {
       text: '更多',
       items: [
-        { text: '友链', link: '/friends/' },
-        { text: '关于', link: '/about/' },
+        { text: '友情链接', link: '/friends/' },
+        { text: '网站信息', link: '/about/' },
       ]
     }
   ]
