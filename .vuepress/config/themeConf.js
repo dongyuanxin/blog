@@ -13,5 +13,12 @@ module.exports = {
     { text: '设计模式', link: '/passages/2018-10-23-singleton-pattern/' },
     { text: 'Git手册', link: '/passages/2018-09-06-git-tag-and-version/' },
     { text: '每周分享', link: '/passages/2019-06-10-weekly-share/' },
+    {
+      text: '更多',
+      items: [
+        { text: '友链', link: '/friends/' },
+        { text: '关于', link: '/about/' },
+      ]
+    }
   ]
 }
