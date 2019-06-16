@@ -20,6 +20,7 @@ const frontend = [
     children: [
       'js/JavaScript基础知识梳理-上',
       'js/JavaScript基础知识梳理-下',
+      'js/正则表达式',
       'js/前端面试中常考的源码实现',
       'js/JavaScript高级程序设计-读书笔记',
     ]
@@ -30,6 +31,14 @@ const frontend = [
     children: [
       'es6/ES6重难点整理',
       'es6/谈谈promise-async-await的执行顺序与V8引擎的BUG'
+    ]
+  },
+  {
+    title: '浏览器与安全',
+    collapsable: false,
+    children: [
+      '浏览器与安全/浏览器常见考点',
+      '浏览器与安全/Web安全与防护'
     ]
   },
   {
