@@ -1,7 +1,7 @@
 ---
 title: "导航"
 permalink: "guide"
-comment: false
+comment: true
 single: true
 ---
 
