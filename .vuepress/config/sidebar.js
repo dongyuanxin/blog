@@ -16,7 +16,6 @@ const cloud = [
 const frontend = [
   {
     title: 'JavaScript',
-    collapsable: false,
     children: [
       'js/JavaScript基础知识梳理-上',
       'js/JavaScript基础知识梳理-下',
@@ -27,23 +26,32 @@ const frontend = [
   },
   {
     title: 'ES6',
-    collapsable: false,
     children: [
+      'es6/Promise概述',
       'es6/ES6重难点整理',
       'es6/谈谈promise-async-await的执行顺序与V8引擎的BUG'
     ]
   },
   {
     title: '浏览器与安全',
-    collapsable: false,
     children: [
+      '浏览器与安全/SSL连接并非完全安全问题解决',
       '浏览器与安全/浏览器常见考点',
       '浏览器与安全/Web安全与防护'
     ]
   },
   {
+    title: 'HTML5',
+    children: [
+      'html5/canvas学习和滤镜实现',
+      'html5/canvas离屏技术与放大镜实现',
+      'html5/websocket学习和群聊实现',
+      'html5/ServiceWorker离线缓存实战',
+      'html5/HTML5原生拖放事件的学习与实践',
+    ]
+  },
+  {
     title: 'css',
-    collapsable: false,
     children: [
       'css/Flex上手与实战',
       'css/你了解css3的nth-child吗'
@@ -118,11 +126,22 @@ const webpack4 = [
   '十六：开发模式和生产模式·实战',
 ]
 
+const nodejs = [
+  {
+    title: '源码探索',
+    collapsable: false,
+    children: [
+      '源码探索/实现简易区块链',
+    ]
+  }
+]
+
 module.exports = {
   '/Git实战手册/': git,
   '/云开发技术/': cloud,
   '/前端知识体系/': frontend,
   '/设计模式手册/': design,
   '/每周分享/': weekly,
-  '/webpack4系列教程/': webpack4
+  '/webpack4系列教程/': webpack4,
+  '/NodeJS/': nodejs
 }

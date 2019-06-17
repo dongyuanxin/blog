@@ -14,6 +14,7 @@ module.exports = {
       items: [
         { text: 'JavaScript', link: '/passages/2019-03-26-javascript-first/' },
         { text: 'ES6', link: '/passages/2019-04-09-es6/' },
+        { text: 'HTML5', link: '/passages/2019-04-10-html5-drag-drop' },
         { text: '浏览器与安全', link: '/passages/2019-05-15-browser/' },
         { text: 'Webpack4教程', link: '/passages/2018-07-29-webpack-demos-introduction/' },
         { text: 'CSS', link: '/passages/2019-03-20-css3-flex/' },
