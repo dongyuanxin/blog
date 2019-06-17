@@ -26,15 +26,15 @@ permalink: "2018-09-07-git-stash"
 
 收到报告，下意识就是开一个 debug 分支来处理 bug。但是，现在的文档没完成，自然无法提交，又不能把没提交的东西带入到新创建的 debug 分支（_执意如此，我也没办法 : \)_）。目前，status 如下：
 
-![](/images/Git/stash解惑与妙用/1.png)
+![](https://static.godbmw.com/images/Git/stash解惑与妙用/1.png)
 
 为了达到目的，分为以下几步：
 
-1. 隐藏修改：`git stash` : ![](/images/Git/stash解惑与妙用/2.png)
-2. 创建新分支：`git branch debug` : ![](/images/Git/stash解惑与妙用/3.png)
-3. 在`debug`分支上修复 bug, 并且将修改添加到 log 中 : ![](/images/Git/stash解惑与妙用/4.png)
-4. 回到`master`分支, 合并`debug`分支的修改, 并且删除 `debug` 分支 : ![](/images/Git/stash解惑与妙用/5.png)
-5. 重新显示隐藏的`stash`，并且将其从`stash list`列表中删除 : ![](/images/Git/stash解惑与妙用/6.png)
+1. 隐藏修改：`git stash` : ![](https://static.godbmw.com/images/Git/stash解惑与妙用/2.png)
+2. 创建新分支：`git branch debug` : ![](https://static.godbmw.com/images/Git/stash解惑与妙用/3.png)
+3. 在`debug`分支上修复 bug, 并且将修改添加到 log 中 : ![](https://static.godbmw.com/images/Git/stash解惑与妙用/4.png)
+4. 回到`master`分支, 合并`debug`分支的修改, 并且删除 `debug` 分支 : ![](https://static.godbmw.com/images/Git/stash解惑与妙用/5.png)
+5. 重新显示隐藏的`stash`，并且将其从`stash list`列表中删除 : ![](https://static.godbmw.com/images/Git/stash解惑与妙用/6.png)
 6. **然后就可以愉快地继续做自己的事情啦！**
 
 感谢[chucklu](https://www.cnblogs.com/chucklu/)的提醒：上面第五步的两条命令，可以用`git stash pop`命令代替。

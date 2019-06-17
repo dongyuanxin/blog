@@ -10,11 +10,11 @@ permalink: "2018-06-19-batch-edit-log"
 
 看一张灾难现场图：
 
-![1](/images/Git/Git修改log中的提交信息/1.png)
+![](https://static.godbmw.com/images/Git/Git修改log中的提交信息/1.png)
 
 仔细查找了相关资料，发现了是因为之前的提交记录中`Author`字段的信息是 163 等国内邮箱的。如下：
 
-![2](/images/Git/Git修改log中的提交信息/2.png)
+![](https://static.godbmw.com/images/Git/Git修改log中的提交信息/2.png)
 
 所以，解决方法就是：**更改`log`中的提交信息**。
 
@@ -57,7 +57,7 @@ fi
 
 **将脚本移入要修改的`git`仓库，并执行脚本**。修改后的 log 信息如下。
 
-![3](/images/Git/Git修改log中的提交信息/3.png)
+![](https://static.godbmw.com/images/Git/Git修改log中的提交信息/3.png)
 
 **通过`git push --force`强行推送修改后的 log 信息。**
 

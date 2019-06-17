@@ -98,10 +98,31 @@ const weekly = [
   '2018/01-心谭-第一期',
 ]
 
+const webpack4 = [
+  '零：前言',
+  '一：打包JS',
+  '二：编译ES6',
+  '三：多页面解决方案--提取公共代码',
+  '四：单页面解决方案--代码分割和懒加载',
+  '五：处理CSS',
+  '六：处理SCSS',
+  '七：SCSS提取和懒加载',
+  '八：JS-Tree-Shaking',
+  '九：CSS-Tree-Shaking',
+  '十：图片处理汇总',
+  '十一：字体文件处理',
+  '十二：处理第三方JavaScript库',
+  '十三：自动生成HTML文件',
+  '十四：Clean-Plugin-and-Watch-Mode',
+  '十五：开发模式与webpack-dev-server',
+  '十六：开发模式和生产模式·实战',
+]
+
 module.exports = {
   '/Git实战手册/': git,
   '/云开发技术/': cloud,
   '/前端知识体系/': frontend,
   '/设计模式手册/': design,
-  '/每周分享/': weekly
+  '/每周分享/': weekly,
+  '/webpack4系列教程/': webpack4
 }
