@@ -55,14 +55,16 @@ const frontend = [
 const ui = [
   {
     title: 'css',
+    collapsable: false,
     children: [
+      'css/border-sizing属性详解和应用',
       'css/Flex上手与实战',
       'css/你了解css3的nth-child吗',
-      'css/border-sizing属性详解和应用'
     ]
   },
   {
     title: 'scss',
+    collapsable: false,
     children: [
       'scss/基础：配置与运行',
       'scss/进阶：继承、占位符和混合宏',
@@ -71,6 +73,7 @@ const ui = [
   },
   {
     title: '项目实战',
+    collapsable: false,
     children: [
       '项目实战/个人博客UI设计'
     ]

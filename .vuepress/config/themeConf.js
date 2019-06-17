@@ -17,11 +17,15 @@ module.exports = {
         { text: 'HTML5', link: '/passages/2019-04-10-html5-drag-drop' },
         { text: '浏览器与安全', link: '/passages/2019-05-15-browser/' },
         { text: 'Webpack4教程', link: '/passages/2018-07-29-webpack-demos-introduction/' },
-        { text: 'CSS', link: '/passages/2019-03-20-css3-flex/' },
       ]
     },
     {
-      text: 'UI设计'
+      text: 'UI设计',
+      items: [
+        { text: 'CSS3', link: '/passages/2018-06-05-border-sizing/' },
+        { text: 'SCSS', link: '/passages/2019-05-17-why-i-stopped-using-sass' },
+        { text: '项目实战', link: '/passages/2018-09-09-mysql-blog-ui' },
+      ]
     },
     { 
       text: '设计模式', 

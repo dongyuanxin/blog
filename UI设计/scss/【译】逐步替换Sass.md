@@ -1,5 +1,5 @@
 ---
-title: "【译】逐步替换Sass"
+title: "「译文」逐步替换Sass"
 date: "2019-05-17"
 permalink: "2019-05-17-why-i-stopped-using-sass"
 ---
