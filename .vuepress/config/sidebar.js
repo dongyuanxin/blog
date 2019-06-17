@@ -49,12 +49,30 @@ const frontend = [
       'html5/ServiceWorker离线缓存实战',
       'html5/HTML5原生拖放事件的学习与实践',
     ]
-  },
+  }
+]
+
+const ui = [
   {
     title: 'css',
     children: [
       'css/Flex上手与实战',
-      'css/你了解css3的nth-child吗'
+      'css/你了解css3的nth-child吗',
+      'css/border-sizing属性详解和应用'
+    ]
+  },
+  {
+    title: 'scss',
+    children: [
+      'scss/基础：配置与运行',
+      'scss/进阶：继承、占位符和混合宏',
+      'scss/【译】逐步替换Sass'
+    ]
+  },
+  {
+    title: '项目实战',
+    children: [
+      '项目实战/个人博客UI设计'
     ]
   }
 ]
@@ -143,5 +161,6 @@ module.exports = {
   '/设计模式手册/': design,
   '/每周分享/': weekly,
   '/webpack4系列教程/': webpack4,
-  '/NodeJS/': nodejs
+  '/NodeJS/': nodejs,
+  '/UI设计/': ui
 }

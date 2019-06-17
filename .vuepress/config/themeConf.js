@@ -20,6 +20,9 @@ module.exports = {
         { text: 'CSS', link: '/passages/2019-03-20-css3-flex/' },
       ]
     },
+    {
+      text: 'UI设计'
+    },
     { 
       text: '设计模式', 
       items: [
