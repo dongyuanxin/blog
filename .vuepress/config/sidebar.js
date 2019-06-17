@@ -33,6 +33,16 @@ const frontend = [
     ]
   },
   {
+    title: 'HTML5',
+    children: [
+      'html5/canvas学习和滤镜实现',
+      'html5/canvas离屏技术与放大镜实现',
+      'html5/websocket学习和群聊实现',
+      'html5/ServiceWorker离线缓存实战',
+      'html5/HTML5原生拖放事件的学习与实践',
+    ]
+  },
+  {
     title: '浏览器与安全',
     children: [
       '浏览器与安全/SSL连接并非完全安全问题解决',
@@ -41,13 +51,13 @@ const frontend = [
     ]
   },
   {
-    title: 'HTML5',
+    title: '开发实战',
     children: [
-      'html5/canvas学习和滤镜实现',
-      'html5/canvas离屏技术与放大镜实现',
-      'html5/websocket学习和群聊实现',
-      'html5/ServiceWorker离线缓存实战',
-      'html5/HTML5原生拖放事件的学习与实践',
+      '开发实战/MathJax-让前端支持数学公式',
+      '开发实战/momentjs使用详解',
+      '开发实战/axios全局代理实战',
+      '开发实战/React中的组件通信',
+      '开发实战/微信网页登录逻辑与实现',
     ]
   }
 ]
