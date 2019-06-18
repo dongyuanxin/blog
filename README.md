@@ -5,12 +5,12 @@ tagline: 鑫谈，也是心谭
 actionText: 进入导航
 actionLink: "/guide/"
 features:
-  - title: 简洁
-    details: 专注于持续干货输出，最新请见Github
+  - title: 原创
+    details: 所有文章均为原创 / 译文
   - title: 协作
-    details: 在文章底部评论，或点击编辑发起PR
-  - title: 订阅
-    details: 进入Github仓库，请Star or Watch
+    details: Issue评论交流 / PR协作编辑
+  - title: 追踪
+    details: 请 Star/Watch 右上角Github仓库
 footer: MIT Licensed | Copyright © 2019 心谭
 comment: false
 single: true
