@@ -24,6 +24,8 @@ module.exports = {
         {
           text: 'Node',
           items: [
+            { text: '命令行交互', link: '/passages/2019-05-07-play-node-shell/' },
+            { text: '测试', link: '/passages/2019-05-04-jest-base/' },
             { text: '源码探索', link: '/passages/2019-05-02-node-block-chain/' }
           ]
         },
