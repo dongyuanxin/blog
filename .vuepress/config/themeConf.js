@@ -47,12 +47,23 @@ module.exports = {
         { text: '项目实战', link: '/passages/2018-09-09-mysql-blog-ui/' },
       ]
     },
-    { 
-      text: '设计模式', 
+    {
+      text: '算法修炼',
       items: [
-        { text: '创建型模式', link: '/passages/2018-10-23-singleton-pattern/' },
-        { text: '结构型模式', link: '/passages/2018-12-16-flyweight-pattern/' },
-        { text: '行为型模式', link: '/passages/2018-11-25-command-pattern/' },
+        {
+          text: '算法和数据结构',
+          items: [
+            { text: 'JS版·剑指offer', link: '/passages/2019-06-23-algorithm-offer/' },
+          ]
+        },
+        { 
+          text: '设计模式', 
+          items: [
+            { text: '创建型模式', link: '/passages/2018-10-23-singleton-pattern/' },
+            { text: '结构型模式', link: '/passages/2018-12-16-flyweight-pattern/' },
+            { text: '行为型模式', link: '/passages/2018-11-25-command-pattern/' },
+          ]
+        },
       ]
     },
     {
