@@ -2,6 +2,7 @@
 title: "实现atoi"
 date: "2019-06-23"
 permalink: "2019-06-23-str-atoi"
+comment: false
 ---
 
 ## 1. 题目描述

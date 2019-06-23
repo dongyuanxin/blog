@@ -1,3 +1,10 @@
+---
+title: "包含min函数的栈"
+date: "2019-06-23"
+permalink: "2019-06-23-stack-queue-min-stack"
+comment: false
+---
+
 ## 1. 题目描述
 
 定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数。在该栈中，调用 min、push 及 pop 的时间复杂度都是 O（1）。
