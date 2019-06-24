@@ -74,6 +74,37 @@ module.exports = {
       ]
     },
     {
+      text: '实验室',
+      items: [
+        {
+          text: '设计',
+          items: [
+            { text: 'Theme Art Design', link: 'https://github.com/dongyuanxin/theme-ad' },
+            { text: 'Theme BMW', link: 'https://github.com/dongyuanxin/theme-bmw' }
+          ]
+        },
+        {
+          text: '插件',
+          items: [
+            { text: 'Vuepress Comment Plugin', link: 'https://github.com/dongyuanxin/vuepress-plugin-comment' },
+            { text: 'Page Counter', link: 'https://github.com/dongyuanxin/page-counter'}
+          ]
+        },
+        {
+          text: '爬虫',
+          items: [
+            { text: 'Music API Next', link: 'https://github.com/dongyuanxin/music-api-next' }
+          ]
+        },
+        {
+          text: 'NLP',
+          items: [
+            { text: 'News Emotion', link: 'https://github.com/dongyuanxin/news-emotion' }
+          ]
+        }
+      ]
+    },
+    {
       text: '了解更多',
       items: [
         { text: '友情链接', link: '/friends/' },
