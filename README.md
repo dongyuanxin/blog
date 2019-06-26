@@ -9,6 +9,19 @@ actionLink: "/guide/"
 footer: MIT Licensed | Copyright © 2019 心谭
 ---
 
+<div align="center" class="show-in-github">
+  <img src="https://xin-tan.com/edit-tools.png">
+  <br/><br/>
+</div>
+
+<div align="center" class="show-in-github">
+  <a href="https://xin-tan.com/"> <img src="https://img.shields.io/badge/online-阅读-success.svg?style=popout-square"></a>
+  <a href="https://github.com/dongyuanxin"> <img src="https://img.shields.io/badge/author-心谭-ff69b4.svg?style=popout-square"></a>
+  <a href="https://github.com/dongyuanxin/blog/blob/master/LICENSE"> <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=popout-square"></a>
+  <a href="https://xin-tan.com/"> <img src="https://img.shields.io/badge/about-前端|算法|UI|工具-fa8c16.svg?style=popout-square"></a>
+  <br/><br/>
+</div>
+
 ## ✏️ 算法修炼
 
 - [Js 版·剑指 Offer 讲解](https://xin-tan.com/passages/2019-06-23-algorithm-offer/)
@@ -37,3 +50,22 @@ footer: MIT Licensed | Copyright © 2019 心谭
 
 - [Webpack4 系列教程](https://xin-tan.com/passages/2018-07-29-webpack-demos-introduction/)
 - [Git 手册](https://xin-tan.com/passages/2018-09-06-git-tag-and-version/)
+
+## 💡 实验室
+
+- [博客主题 Art Design](https://github.com/dongyuanxin/theme-ad)
+- [博客主题 BMW](https://github.com/dongyuanxin/theme-bmw)
+- [Vuepress 评论插件](https://github.com/dongyuanxin/vuepress-plugin-comment)
+- [极简网页计数器](https://github.com/dongyuanxin/page-counter)
+- [多平台音乐破解库](https://github.com/dongyuanxin/music-api-next)
+- [金融文本分析模型](https://github.com/dongyuanxin/news-emotion)
+
+<style scoped>
+main ul {
+  line-height: 2.5;
+}
+
+.show-in-github {
+  display: none;
+}
+</style>
