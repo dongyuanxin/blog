@@ -84,7 +84,7 @@ const request = (context.request = Object.create(this.request));
 context.req = request.req = response.req = req;
 ```
 
-读到这里，虽然可以解释 `ctx.headers` 是 `ctx.request.headers` 的语法糖这类问题。但是感觉怪怪的。就以这个例子，ctx.headers 访问的是 ctx.reqeust 上的 headers，而不是本次请求信息上的`headers`。本次请求信息挂在了`ctx.req`上。
+读到这里，虽然可以解释 `context.headers` 是 `context.request.headers` 的语法糖这类问题。但是感觉怪怪的。就以这个例子，context.headers 访问的是 context.request 上的 headers，而不是本次请求信息上的`headers`。本次请求信息挂在了`context.req`上。
 
 让我们再回到`reqeust.js`的源码，看到了`headers`的 getter 实现：
 
@@ -94,13 +94,7 @@ get headers() {
 }
 ```
 
-ok，看来这里的`this`就是指的上下文环境咯。那么肯定是在`application.js`中某个地方改变了`this`的指向。果然，在`application.js`的构造函数中可以看到：
-
-```javascript
-this.request = Object.create(request);
-```
-
-application 实例上的 request 被传递给了 context.request，此时 this 自然指向了 context。
+所以，`context.request.headers` 就是 `context.request.req.headers`。而前面提及的`createContext`方法中的逻辑，`context.reqest`上的`req`属性就是由`http`模块函数传来的真实请求信息。 **感谢 [@theniceangel](https://github.com/theniceangel) 的评论指正**。
 
 可以看到，koa 为了让开发者使用方便，在上下文上做了很多工作。
 
