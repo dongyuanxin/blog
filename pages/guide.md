@@ -7,6 +7,7 @@ single: true
 
 ## 最新文章
 
+- [无声半年：面试、实习和生活总结](https://xin-tan.com/passages/2019-07-06-half-year/)
 - Koa 源码解读：
   1. [架构设计](https://xin-tan.com/passages/2019-06-18-deep-in-koa/)
   2. [核心库原理](https://xin-tan.com/passages/2019-06-21-deep-in-koa/)
