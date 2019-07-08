@@ -67,6 +67,11 @@ permalink: "2019-03-20-css3-flex"
 以上面的`html`结构为例，如果要让`<div>`中的元素水平垂直居中，只需要以下样式代码：
 
 ```css
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 ```
 
 **场景 ②：左右两侧布局，其中一侧宽度确定；另一侧宽度占满剩余空间，并且自动响应**
@@ -98,26 +103,26 @@ span:nth-child(3) {
 
 在实现水平垂直居中的过程中，发现了`flex`布局仅仅影响容器的一级子元素。例如下面这段代码：
 
-```css
+```html
 <html>
-<head>
-  <style>
-    .level1 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="level1">
-    <div class="level2">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
+  <head>
+    <style>
+      .level1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="level1">
+      <div class="level2">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -125,31 +130,30 @@ level2 类就不是水平垂直居中的，因为水平垂直居中仅仅影响�
 
 如果要让 level2 也实现水平垂直居中，我们可以专门封装一个用于水平垂直居中的类，代码如下：
 
-```css
+```html
 <html>
-<head>
-  <style>
-    .center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="level1 center">
-    <div class="level2 center">
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
+  <head>
+    <style>
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="level1 center">
+      <div class="level2 center">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
 ### 参考链接
 
-[阮一峰的网络日志 Flex 布局教程：语法篇](Flex 布局教程：语法篇)
-
-[菜鸟教程 Flex 布局语法教程](http://www.runoob.com/w3cnote/flex-grammar.html)
+- [阮一峰的网络日志 Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+- [菜鸟教程 Flex 布局语法教程](http://www.runoob.com/w3cnote/flex-grammar.html)
