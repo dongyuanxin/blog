@@ -155,7 +155,7 @@ console.log(obj.__proto__ === Object.prototype); // output: true
 
 #### 原型
 
-> 题目：如何 JS 中的原型？
+> 题目：如何理解 JS 中的原型？
 
 ```javascript
 // 构造函数
