@@ -10,6 +10,8 @@ module.exports = {
   themeConfig: themeConf,
   plugins: [
     require('./plugins/my-router'),
+    require('./plugins/my-loader'),
+    require('vuepress-plugin-viewer'),
     '@vuepress/back-to-top',
     [ 
       '@vuepress/google-analytics', { 'ga': 'UA-124601890-1' }
