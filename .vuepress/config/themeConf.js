@@ -76,6 +76,7 @@ module.exports = {
     {
       text: '了解更多',
       items: [
+        { text: '参与协作', link: '/together/' },
         { text: '友情链接', link: '/friends/' },
         { text: '网站信息', link: '/about/' },
       ]
