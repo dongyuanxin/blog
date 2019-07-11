@@ -1,6 +1,7 @@
 ---
 title: "友情链接"
 permalink: "friends"
+sidebar: "auto"
 single: true
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "网站信息"
 permalink: "about"
+sidebar: "auto"
 single: true
 ---
 

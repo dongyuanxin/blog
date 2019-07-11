@@ -3,7 +3,7 @@ home: true
 comment: false
 single: true
 heroImage: "./edit-tools.png"
-tagline: 鑫谈，也是心谭
+tagline: 用心，谈技术
 actionText: 进入导航
 actionLink: "/guide/"
 footer: MIT Licensed | Copyright © 2019 心谭
@@ -59,6 +59,10 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - [极简网页计数器](https://github.com/dongyuanxin/page-counter)
 - [多平台音乐破解库](https://github.com/dongyuanxin/music-api-next)
 - [金融文本分析模型](https://github.com/dongyuanxin/news-emotion)
+
+## 🤲🏻 协作者
+
+- [HuangHongkai](https://github.com/HuangHongkai) - **字节跳动**\<2523272490@qq.com\> 👦
 
 <style scoped>
 main ul {

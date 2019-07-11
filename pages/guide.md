@@ -1,6 +1,7 @@
 ---
 title: "导航"
 permalink: "guide"
+sidebar: "auto"
 comment: true
 single: true
 ---
