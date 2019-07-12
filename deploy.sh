@@ -3,6 +3,10 @@
 # throw error
 set -e
 
+if [[ -z "$CODING_TOKEN"  || -z "$GITHUB_TOKEN" ]]; then
+  exit 0
+fi
+
 # build static
 npm run build
 cd .vuepress/dist
