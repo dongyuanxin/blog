@@ -16,6 +16,7 @@ const cloud = [
 const frontend = [
   {
     title: 'JavaScript',
+    collapsable: false,
     children: [
       'js/JavaScript基础知识梳理-上',
       'js/JavaScript基础知识梳理-下',
@@ -26,6 +27,7 @@ const frontend = [
   },
   {
     title: 'ES6',
+    collapsable: false,
     children: [
       'es6/Promise概述',
       'es6/ES6重难点整理',
@@ -34,16 +36,19 @@ const frontend = [
   },
   {
     title: 'HTML5',
+    collapsable: false,
     children: [
       'html5/canvas学习和滤镜实现',
       'html5/canvas离屏技术与放大镜实现',
+      'html5/HTML5原生拖放事件的学习与实践',
+      'html5/FileAPI文件操作实战',
       'html5/websocket学习和群聊实现',
       'html5/ServiceWorker离线缓存实战',
-      'html5/HTML5原生拖放事件的学习与实践',
     ]
   },
   {
     title: '浏览器与安全',
+    collapsable: false,
     children: [
       '浏览器与安全/SSL连接并非完全安全问题解决',
       '浏览器与安全/浏览器常见考点',
@@ -52,6 +57,7 @@ const frontend = [
   },
   {
     title: '开发实战',
+    collapsable: false,
     children: [
       '开发实战/MathJax-让前端支持数学公式',
       '开发实战/momentjs使用详解',
@@ -193,6 +199,7 @@ const algorithmOffer = [
   '',
   {
     title: '字符串',
+    collapsable: false,
     children: [
       '字符串/01-替换空格',
       '字符串/02-字符串的全排列',
@@ -202,6 +209,7 @@ const algorithmOffer = [
   },
   {
     title: '查找',
+    collapsable: false,
     children: [
       '查找/01-旋转数组最小的数字',
       '查找/02-数字在排序数组中出现的次数',
@@ -209,6 +217,7 @@ const algorithmOffer = [
   },
   {
     title: '链表',
+    collapsable: false,
     children: [
       '链表/01-从尾到头打印链表',
       '链表/02-快速删除链表节点',
@@ -221,6 +230,7 @@ const algorithmOffer = [
   },
   {
     title: '数组',
+    collapsable: false,
     children: [
       '数组/01-二维数组中的查找',
       '数组/02-数组顺序调整',
@@ -230,6 +240,7 @@ const algorithmOffer = [
   },
   {
     title: '栈和队列',
+    collapsable: false,
     children: [
       '栈和队列/01-用两个栈实现队列',
       '栈和队列/02-包含min函数的栈',
@@ -238,6 +249,7 @@ const algorithmOffer = [
   },
   {
     title: '递归与循环',
+    collapsable: false,
     children: [
       '递归与循环/01-青蛙跳台阶',
       '递归与循环/02-数值的整次方',
@@ -254,6 +266,7 @@ const algorithmOffer = [
   },
   {
     title: '树',
+    collapsable: false,
     children: [
       '树/01-重建二叉树',
       '树/02-判断是否子树',
@@ -267,6 +280,7 @@ const algorithmOffer = [
   },
   {
     title: '位运算',
+    collapsable: false,
     children: [
       '位运算/01-二进制中1的个数',
       '位运算/02-二进制中1的个数进阶版',
@@ -275,6 +289,7 @@ const algorithmOffer = [
   },
   {
     title: '哈希表',
+    collapsable: false,
     children: [
       '哈希表/01-丑数',
       '哈希表/02-第一次只出现一次的字符',
@@ -282,6 +297,7 @@ const algorithmOffer = [
   },
   {
     title: '堆',
+    collapsable: false,
     children: [
       '堆/01-最小的k个数'
     ]
