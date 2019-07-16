@@ -44,6 +44,7 @@ module.exports = {
       items: [
         { text: 'CSS3', link: '/passages/2018-06-05-border-sizing/' },
         { text: 'SCSS', link: '/passages/2019-05-17-why-i-stopped-using-sass/' },
+        { text: '动画设计', link: '/passages/2019-07-16-font-animation/' },
         { text: '项目实战', link: '/passages/2018-09-09-mysql-blog-ui/' },
       ]
     },

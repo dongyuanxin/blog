@@ -88,6 +88,13 @@ const ui = [
     ]
   },
   {
+    title: '动画设计',
+    collapsable: false,
+    children: [
+      '动画设计/字体特效'
+    ]
+  },
+  {
     title: '项目实战',
     collapsable: false,
     children: [

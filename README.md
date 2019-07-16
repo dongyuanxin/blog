@@ -22,6 +22,10 @@ footer: MIT Licensed | Copyright © 2019 心谭
   <br/><br/>
 </div>
 
+## 🆕 制作中...
+
+- [动画设计](https://xin-tan.com/passages/2019-07-16-font-animation/)
+
 ## ✏️ 算法修炼
 
 - [Js 版·剑指 Offer 讲解](https://xin-tan.com/passages/2019-06-23-algorithm-offer/)
@@ -38,7 +42,7 @@ footer: MIT Licensed | Copyright © 2019 心谭
 ## 🎨 UI 设计
 
 - [CSS3 重难点](https://xin-tan.com/passages/2018-06-05-border-sizing/)
-- [Scss 知识点](https://xin-tan.com/passages/2018-05-29-scss-fisrt-step/)
+- [SCSS 知识点](https://xin-tan.com/passages/2018-05-29-scss-fisrt-step/)
 
 ## 💻 中后台
 
@@ -51,6 +55,10 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - [Webpack4 系列教程](https://xin-tan.com/passages/2018-07-29-webpack-demos-introduction/)
 - [Git 手册](https://xin-tan.com/passages/2018-09-06-git-tag-and-version/)
 
+## 🤲🏻 协作者
+
+- [HuangHongkai](https://github.com/HuangHongkai) - **字节跳动**\<2523272490@qq.com\> 👦
+
 ## 💡 实验室
 
 - [博客主题 Art Design](https://github.com/dongyuanxin/theme-ad)
@@ -60,9 +68,12 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - [多平台音乐破解库](https://github.com/dongyuanxin/music-api-next)
 - [金融文本分析模型](https://github.com/dongyuanxin/news-emotion)
 
-## 🤲🏻 协作者
+## 😃 协作 && 联系
 
-- [HuangHongkai](https://github.com/HuangHongkai) - **字节跳动**\<2523272490@qq.com\> 👦
+- [协作规范](https://xin-tan.com/together/)
+- **微信**: IT_xxx
+- **Email**: yuanxin.me@gmail.com
+- **QQ**: 2181111110
 
 <style scoped>
 main ul {
