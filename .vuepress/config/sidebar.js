@@ -91,7 +91,8 @@ const ui = [
     title: '动画设计',
     collapsable: false,
     children: [
-      '动画设计/字体特效'
+      '动画设计/字体特效',
+      '动画设计/输入框特效',
     ]
   },
   {
