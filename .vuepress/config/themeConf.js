@@ -8,7 +8,7 @@ module.exports = {
   lastUpdated: '更新于',
   sidebar,
   nav: [
-    { text: '导航', link: '/guide/' },
+    { text: '最新', link: '/guide/' },
     { 
       text: '大前端',
       items: [

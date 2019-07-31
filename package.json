@@ -18,6 +18,7 @@
     "check": "./node_modules/.bin/prettier --check ./*/**/*.md",
     "lint": "./node_modules/.bin/prettier --write ./*/**/*.md",
     "dev": "./node_modules/.bin/vuepress dev .",
+    "start": "npm run dev",
     "build": "./node_modules/.bin/vuepress build ."
   },
   "repository": {

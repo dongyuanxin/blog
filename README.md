@@ -24,7 +24,8 @@ footer: MIT Licensed | Copyright © 2019 心谭
 
 ## 🆕 制作中...
 
-- [动画设计](https://xin-tan.com/passages/2019-07-16-font-animation/)
+- [tcb-game-gomoku](https://github.com/TencentCloudBase/tcb-game-gomoku)：在线对战五子棋 / 微信 / 云开发 / 小游戏
+- 私人网盘
 
 ## ✏️ 算法修炼
 
@@ -43,6 +44,7 @@ footer: MIT Licensed | Copyright © 2019 心谭
 
 - [CSS3 重难点](https://xin-tan.com/passages/2018-06-05-border-sizing/)
 - [SCSS 知识点](https://xin-tan.com/passages/2018-05-29-scss-fisrt-step/)
+- [动画设计](https://xin-tan.com/passages/2019-07-16-font-animation/)
 
 ## 💻 中后台
 
@@ -55,22 +57,22 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - [Webpack4 系列教程](https://xin-tan.com/passages/2018-07-29-webpack-demos-introduction/)
 - [Git 手册](https://xin-tan.com/passages/2018-09-06-git-tag-and-version/)
 
-## 🤲🏻 协作者
-
-- [HuangHongkai](https://github.com/HuangHongkai) - **字节跳动**\<2523272490@qq.com\> 👦
-
 ## 💡 实验室
 
-- [博客主题 Art Design](https://github.com/dongyuanxin/theme-ad)
-- [博客主题 BMW](https://github.com/dongyuanxin/theme-bmw)
-- [Vuepress 评论插件](https://github.com/dongyuanxin/vuepress-plugin-comment)
-- [极简网页计数器](https://github.com/dongyuanxin/page-counter)
-- [多平台音乐破解库](https://github.com/dongyuanxin/music-api-next)
-- [金融文本分析模型](https://github.com/dongyuanxin/news-emotion)
+- [theme-art-design](https://github.com/dongyuanxin/theme-ad)：提供简约UI和丰富功能的博客框架
+- [theme-bmw](https://github.com/dongyuanxin/theme-bmw)：基于Hexo的博客主题
+- [vuepress-plugin-comment](https://github.com/dongyuanxin/vuepress-plugin-comment)：支持在Vuepress中使用 Valine / Gitalk 
+- [page-counter](https://github.com/dongyuanxin/page-counter)：无后端 + 一行代码的极简网页计数器
+- [music-api-next](https://github.com/dongyuanxin/music-api-next)：qq音乐、网易音乐、5sing、虾米音乐这四个平台的音乐破解库
+- [news-emotion](https://github.com/dongyuanxin/news-emotion)：中短金融文本情感倾向判断的机器学习模型
 
-## 😃 协作 && 联系
+## 🤲🏻 协作者
 
 - [协作规范](https://xin-tan.com/together/)
+- [HuangHongkai](https://github.com/HuangHongkai) - **字节跳动**\<2523272490@qq.com\> 👦
+
+## 📮 联系
+
 - **微信**: IT_xxx
 - **Email**: yuanxin.me@gmail.com
 - **QQ**: 2181111110
