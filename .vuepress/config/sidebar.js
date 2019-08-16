@@ -5,12 +5,8 @@ const git = [
 ]
 
 const cloud = [
-  {
-    title: 'Serverless',
-    children: [
-      'serverless/基于ServerLess的极简网页计数器：源码分析与最佳实践'
-    ]
-  }
+  '基于实时数据库-在线对战五子棋小游戏',
+  '基于ServerLess的极简网页计数器：源码分析与最佳实践',
 ]
 
 const frontend = [

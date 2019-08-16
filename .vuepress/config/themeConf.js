@@ -21,7 +21,7 @@ module.exports = {
             { text: '浏览器与安全', link: '/passages/2019-05-15-browser/' },
           ]
         },
-        { text: '云开发技术', link: '/passages/2019-05-18-serverless-page-counter/' },
+        { text: '云开发技术', link: '/passages/2019-08-14-game-gomoku/' },
         {
           text: 'Node',
           items: [
