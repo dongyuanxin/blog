@@ -12,6 +12,7 @@ features:
   - title: Follow
     details: Star / Watch github repository
 footer: MIT Licensed | Copyright © 2019 XinTan
+permalink: "/en/"
 comment: false
 single: true
 ---
