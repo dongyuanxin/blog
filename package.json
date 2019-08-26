@@ -19,6 +19,8 @@
   "scripts": {
     "check": "node bin/prettier.js -t docs -c",
     "lint": "node bin/prettier.js -t docs -l",
+    "check:notes": "node bin/prettier.js -t notes -c",
+    "lint:notes": "node bin/prettier.js -t notes -l",
     "dev": "./node_modules/.bin/vuepress dev .",
     "start": "npm run dev",
     "build": "./node_modules/.bin/vuepress build ."
