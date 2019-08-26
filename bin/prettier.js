@@ -35,11 +35,12 @@ if (program.target) {
 
 if (program.check) {
   files.forEach(file => {
-    print(chalk.grey(`INFO: check ${file.path}`))
+    const { path, content } = file
+    print(chalk.grey(`INFO: check ${path}`))
     
-    const valid = prettier.check(file.content, { filepath: file.path })
+    const valid = prettier.check(content, { filepath: path })
     if (!valid && !program.lint) {
-      print(chalk.red(`ERROR: ${file} lint check fails`))
+      print(chalk.red(`ERROR: ${path} lint check fails`))
       process.exit(1)
     } else {
       file.check = true
