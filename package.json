@@ -7,6 +7,8 @@
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "@vuepress/plugin-pwa": "^1.0.0-rc.1",
+    "chalk": "^2.4.2",
+    "commander": "^3.0.0",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "vuepress": "^1.0.0-beta.2",
@@ -15,8 +17,10 @@
   },
   "devDependencies": {},
   "scripts": {
-    "check": "./node_modules/.bin/prettier --check ./docs/**/*.md",
-    "lint": "./node_modules/.bin/prettier --write ./docs/**/*.md",
+    "check": "node bin/prettier.js -t docs -c",
+    "lint": "node bin/prettier.js -t docs -l",
+    "check:notes": "node bin/prettier.js -t notes -c",
+    "lint:notes": "node bin/prettier.js -t notes -l",
     "dev": "./node_modules/.bin/vuepress dev .",
     "start": "npm run dev",
     "build": "./node_modules/.bin/vuepress build ."
