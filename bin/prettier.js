@@ -1,8 +1,10 @@
 const fs = require('fs')
 const path = require('path')
+
 const prettier = require('prettier')
 const program = require("commander")
 const chalk = require('chalk')
+const ora = require('ora')
 
 const pkgJson = require('./../package.json')
 const print = console.log
@@ -33,31 +35,33 @@ if (program.target) {
   process.exit(1)
 }
 
-if (program.check) {
+if (program.lint || program.check) {
   files.forEach(file => {
     const { path, content } = file
-    print(chalk.grey(`INFO: check ${path}`))
+    process.stdout.write('\b'.repeat(10000))
+    process.stdout.write(chalk.grey(`INFO: check ${path}`))
     
     const valid = prettier.check(content, { filepath: path })
+    file.check = valid
+
     if (!valid && !program.lint) {
       print(chalk.red(`ERROR: ${path} lint check fails`))
       process.exit(1)
-    } else {
-      file.check = true
     }
   })
-
-  print(chalk.green('SUCCESS: all files lint check pass'))
+  process.stdout.write('\b'.repeat(10000))
+  process.stdout.write(chalk.green('SUCCESS: all files lint check pass'))
 }
 
 if (program.lint) {
   files.forEach(file => {
     const { content, check, path } = file
     if (check) {
+      print(chalk.grey(`INFO: lint ${path}`))
       return
     }
 
-    print(chalk.grey(`INFO: lint ${file.path}`))
+    print(`INFO: lint ${path}`)
 
     const validContent = prettier.format(content, { filepath: path })
     fs.writeFileSync(path, validContent, { flag: 'w' })
