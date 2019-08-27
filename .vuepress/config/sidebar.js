@@ -22,6 +22,14 @@ const frontend = [
     ]
   },
   {
+    title: 'TypeScript',
+    collapsable: false,
+    children: [
+      'typescript/01.基础篇',
+      'typescript/02.实战篇',
+    ]
+  },
+  {
     title: 'ES6',
     collapsable: false,
     children: [
