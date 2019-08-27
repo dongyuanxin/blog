@@ -56,7 +56,7 @@ document
 
 `event.target.files` 是一个`FileList`对象，它是一个由`File`对象组成的列表。
 
-每个 File 对象，保存着选中的对应文件的属性。常用的用：
+每个 File 对象，保存着选中的对应文件的属性。常用的有：
 
 - name：文件名
 - type：文件类型

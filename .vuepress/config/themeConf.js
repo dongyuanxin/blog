@@ -7,8 +7,9 @@ module.exports = {
   editLinkText: '在 GitHub 上编辑此页',
   lastUpdated: '更新于',
   sidebar,
+  docsDir: 'docs',
   nav: [
-    { text: '导航', link: '/guide/' },
+    { text: '最新', link: '/guide/' },
     { 
       text: '大前端',
       items: [
@@ -21,7 +22,7 @@ module.exports = {
             { text: '浏览器与安全', link: '/passages/2019-05-15-browser/' },
           ]
         },
-        { text: '云开发技术', link: '/passages/2019-05-18-serverless-page-counter/' },
+        { text: '云开发技术', link: '/passages/2019-08-14-game-gomoku/' },
         {
           text: 'Node',
           items: [
@@ -44,6 +45,7 @@ module.exports = {
       items: [
         { text: 'CSS3', link: '/passages/2018-06-05-border-sizing/' },
         { text: 'SCSS', link: '/passages/2019-05-17-why-i-stopped-using-sass/' },
+        { text: '动画设计', link: '/passages/2019-07-16-font-animation/' },
         { text: '项目实战', link: '/passages/2018-09-09-mysql-blog-ui/' },
       ]
     },

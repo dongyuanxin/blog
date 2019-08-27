@@ -5,12 +5,8 @@ const git = [
 ]
 
 const cloud = [
-  {
-    title: 'Serverless',
-    children: [
-      'serverless/基于ServerLess的极简网页计数器：源码分析与最佳实践'
-    ]
-  }
+  '基于实时数据库-在线对战五子棋小游戏',
+  '基于ServerLess的极简网页计数器：源码分析与最佳实践',
 ]
 
 const frontend = [
@@ -85,6 +81,17 @@ const ui = [
       'scss/基础：配置与运行',
       'scss/进阶：继承、占位符和混合宏',
       'scss/【译】逐步替换Sass'
+    ]
+  },
+  {
+    title: '动画设计',
+    collapsable: false,
+    children: [
+      '动画设计/字体特效',
+      '动画设计/输入框特效',
+      '动画设计/按钮特效',
+      '动画设计/Loader特效-基础篇',
+      '动画设计/Loader特效-进阶篇'
     ]
   },
   {

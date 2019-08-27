@@ -1,4 +1,6 @@
 sudo: true
+git:
+  submodules: false
 branches:
   except:
   - gh-pages
