@@ -312,13 +312,13 @@ const algorithmOffer = [
 ]
 
 module.exports = {
-  '/Git实战手册/': git,
-  '/云开发技术/': cloud,
-  '/前端知识体系/': frontend,
-  '/设计模式手册/': design,
-  '/每周分享/': weekly,
-  '/webpack4系列教程/': webpack4,
-  '/NodeJS/': nodejs,
-  '/UI设计/': ui,
-  '/剑指offer刷题笔记/': algorithmOffer,
+  '/docs/Git实战手册/': git,
+  '/docs/云开发技术/': cloud,
+  '/docs/前端知识体系/': frontend,
+  '/docs/设计模式手册/': design,
+  '/docs/每周分享/': weekly,
+  '/docs/webpack4系列教程/': webpack4,
+  '/docs/NodeJS/': nodejs,
+  '/docs/UI设计/': ui,
+  '/docs/剑指offer刷题笔记/': algorithmOffer,
 }
