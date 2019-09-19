@@ -2,8 +2,8 @@ sudo: true
 git:
   submodules: false
 branches:
-  except:
-  - gh-pages
+  only:
+    - master
 language: node_js
 node_js:
   - "10"
