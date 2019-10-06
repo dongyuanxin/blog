@@ -1,6 +1,4 @@
 sudo: true
-git:
-  submodules: false
 branches:
   only:
     - master
