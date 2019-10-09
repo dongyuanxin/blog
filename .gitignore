@@ -10,7 +10,10 @@ dist
 .vuepress/config/sidebar-auto.js
 
 # 撰写中
-todo
+todo/
+
+# 读书笔记
+notes/
 
 # 剑指offer刷题笔记
 剑指offer刷题笔记/index.js
