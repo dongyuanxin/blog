@@ -53,6 +53,10 @@ export default {
       const re = /.*\/(.*?)\.(html|md)/
 
       return this.posts
+        .filter(post => {
+          const { frontmatter } = post;
+          return frontmatter && frontmatter.permalink && frontmatter.title;
+        })
         .map(post => {
           const execs = re.exec(post.relativePath)
           return {

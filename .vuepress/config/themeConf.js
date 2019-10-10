@@ -9,6 +9,7 @@ module.exports = {
   sidebar,
   nav: [
     { text: "最新", link: "/guide/" },
+    { text: "笔记", link: "/passages/2019-10-02-os-base/" },
     {
       text: "大前端",
       items: [

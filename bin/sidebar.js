@@ -4,6 +4,7 @@ const ejs = require("ejs");
 const logger = require("tracer").colorConsole();
 
 const docsRoot = path.join(__dirname, "..", "docs");
+const notesRoot = path.join(__dirname, "..", "notes");
 const sidebarPath = path.join(
   __dirname,
   "..",
@@ -18,7 +19,7 @@ const template = `
 
 module.exports = {
   <% for (let variable of variables) { %>
-    "/docs/<%- variable.path %>/": <%- variable.name %>,
+    "<%- variable.path %>": <%- variable.name %>,
   <% } %>
 }
 `;
@@ -39,11 +40,20 @@ function main() {
     }
 
     variables.push({
-      path: path.basename(toc),
+      path: `/docs/${path.basename(toc)}/`,
       name: path.basename(toc).replace(/ /g, "_"),
       js
     });
   });
+
+  const notesJs = mapTocToSidebar(notesRoot);
+  if (notesJs.length) {
+    variables.push({
+      path: "/notes/",
+      name: "notes",
+      js: notesJs
+    });
+  }
 
   fs.writeFileSync(sidebarPath, ejs.render(template, { variables }));
 }
