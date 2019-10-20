@@ -57,45 +57,26 @@ module.exports = {
       ]
     },
     {
-      text: "UI设计",
+      text: "UI",
       items: [
-        { text: "CSS3", link: "/passages/2018-06-05-border-sizing/" },
+        { text: "css", link: "/passages/2018-06-05-border-sizing/" },
         {
-          text: "SCSS",
+          text: "scss",
           link: "/passages/2019-05-17-why-i-stopped-using-sass/"
         },
-        { text: "动画设计", link: "/passages/2019-07-16-font-animation/" },
-        { text: "项目实战", link: "/passages/2018-09-09-mysql-blog-ui/" }
+        { text: "动画", link: "/passages/2019-07-16-font-animation/" }
       ]
     },
     {
-      text: "算法修炼",
+      text: "算法",
       items: [
         {
-          text: "算法和数据结构",
-          items: [
-            {
-              text: "JS版·剑指offer",
-              link: "/passages/2019-06-23-algorithm-offer/"
-            }
-          ]
+          text: "剑指offer",
+          link: "/passages/2019-06-23-algorithm-offer/"
         },
         {
           text: "设计模式",
-          items: [
-            {
-              text: "创建型模式",
-              link: "/passages/2018-10-23-singleton-pattern/"
-            },
-            {
-              text: "结构型模式",
-              link: "/passages/2018-12-16-flyweight-pattern/"
-            },
-            {
-              text: "行为型模式",
-              link: "/passages/2018-11-25-command-pattern/"
-            }
-          ]
+          link: "/passages/2018-10-23-singleton-pattern/"
         }
       ]
     },
@@ -107,12 +88,8 @@ module.exports = {
       ]
     },
     {
-      text: "了解更多",
-      items: [
-        { text: "参与协作", link: "/together/" },
-        { text: "友情链接", link: "/friends/" },
-        { text: "网站信息", link: "/about/" }
-      ]
+      text: "友链",
+      link: "/friends/"
     }
   ]
 };
