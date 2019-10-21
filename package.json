@@ -4,9 +4,9 @@
   "description": "集博客之精华而生的目录，已有前端知识体系梳理、设计模式手册、Webpack4教程，欢迎食用",
   "main": "index.js",
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
-    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-pwa": "^1.2.0",
     "chalk": "^2.4.2",
     "commander": "^3.0.0",
     "ejs": "^2.7.1",
@@ -15,7 +15,7 @@
     "ora": "^3.4.0",
     "prettier": "^1.17.1",
     "tracer": "^1.0.1",
-    "vuepress": "^1.0.0-beta.2",
+    "vuepress": "^1.2.0",
     "vuepress-plugin-comment": "^0.5.4",
     "vuepress-plugin-viewer": "^1.0.0"
   },
