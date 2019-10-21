@@ -17,10 +17,14 @@ module.exports = {
           link: "/passages/2019-03-26-javascript-first/"
         },
         {
+          text: "React",
+          link: "/passages/2019-04-08-react-components-communication/"
+        },
+        {
           text: "TypeScript",
           link: "/passages/2019-08-27-typescript-notes/"
         },
-        { text: "ECMAScript6", link: "/passages/2019-04-09-es6/" },
+        { text: "ES6", link: "/passages/2019-04-09-es6/" },
         { text: "HTML5", link: "/passages/2019-04-10-html5-drag-drop/" },
         { text: "浏览器与安全", link: "/passages/2019-05-15-browser/" }
       ]

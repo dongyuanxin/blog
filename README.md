@@ -25,6 +25,7 @@ footer: MIT Licensed | Copyright © 2019 心谭
 ## 🌐 前端
 
 - [JavaScript](https://xin-tan.com/passages/2019-03-26-javascript-first/)
+- [React](https://xin-tan.com/passages/2019-04-08-react-components-communication/)
 - [TypeScript](https://xin-tan.com/passages/2019-08-27-typescript-notes/)
 - [ES6](https://xin-tan.com/passages/2019-04-09-es6/)
 - [HTML5](https://xin-tan.com/passages/2018-08-20-canvas-beauty-filter/)
