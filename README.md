@@ -29,6 +29,7 @@ footer: MIT Licensed | Copyright © 2019 心谭
   - [前端面试中常考的 js 源码实现](https://xin-tan.com/passages/2019-03-18-interview-js-code/)
   - [查看全部 👉](https://xin-tan.com/passages/2019-03-26-javascript-first/)
 - **React**
+  - [一文说清「VirtualDOM」的含义与实现](https://xin-tan.com/passages/2019-11-11-wirte-virtual-dom/)
   - [一文彻底搞懂 ReactHooks 的原理和实现](https://xin-tan.com/passages/2019-10-21-react-hooks/)
   - [ReactRouter 实战进阶](https://xin-tan.com/passages/2019-09-11-react-router/)
   - [组件通信的通用解决方案](https://xin-tan.com/passages/2019-04-08-react-components-communication/)
@@ -42,6 +43,7 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - **ES6**
   - [谈谈 promise/async/await 的执行顺序与 V8 引擎的 BUG](https://xin-tan.com/passages/2018-05-29-promise-async-await-order/)
   - [ES6 重难点整理](https://xin-tan.com/passages/2019-04-09-es6/)
+  - [手写 Promise 的相关方法](https://xin-tan.com/passages/2019-11-23-promise-methods/)
 - **浏览器与安全**
   - [6 种 Web 安全问题与防护](https://xin-tan.com/passages/2019-05-15-web-safety/)
 
@@ -78,10 +80,12 @@ footer: MIT Licensed | Copyright © 2019 心谭
 - **Serverless**
   - [基于实时数据库的对战小游戏开发](https://xin-tan.com/passages/2019-08-14-game-gomoku/)
   - [无后端的 PV 统计器](https://xin-tan.com/passages/2019-05-18-serverless-page-counter/)
+- [交互式 CUI 开发](https://xin-tan.com/passages/2019-05-07-play-node-shell/)
+- [日志库的实现机制与优化方法](https://xin-tan.com/passages/2019-09-03-nodejs-watch-file/)
+- [NodeJS 是如何监听文件的变化？](https://xin-tan.com/passages//2019-09-03-nodejs-watch-file/)
+- [单元、服务、集成与自动测试](https://xin-tan.com/passages/2019-05-04-jest-base/)
 - [利用 Node 开发区块链](https://xin-tan.com/passages/2019-05-02-node-block-chain/)
 - [负载均衡：轮询调度算法研究](https://xin-tan.com/passages/2019-05-04-rr/)
-- [交互式 CUI 开发](https://xin-tan.com/passages/2019-05-07-play-node-shell/)
-- [单元、服务、集成与自动测试](https://xin-tan.com/passages/2019-05-04-jest-base/)
 
 ## 🔧 工具
 
