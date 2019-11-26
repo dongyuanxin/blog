@@ -100,7 +100,7 @@ export default {
   border-left: 1px solid $borderColor;
   overflow-y: auto;
 
-  @media (max-width: $MQMobile) {
+  @media (max-width: $MQNarrow) {
     display: none;
   }
 
