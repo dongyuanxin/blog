@@ -9,12 +9,8 @@ module.exports = {
   sidebar,
   nav: [
     {
-      text: "博客动态",
+      text: "最新",
       link: "/guide/"
-    },
-    {
-      text: "思考与成长",
-      link: "/passages/2019-11-25-how-insist-on-learning/"
     },
     // 前端
     {
@@ -80,6 +76,10 @@ module.exports = {
     {
       text: "其它",
       items: [
+        {
+          text: "想法",
+          link: "/passages/2019-11-25-how-insist-on-learning/"
+        },
         {
           text: "学习笔记",
           link: "/passages/2019-10-02-os-base/"
