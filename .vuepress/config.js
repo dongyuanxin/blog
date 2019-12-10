@@ -1,9 +1,10 @@
-const { mdConf, themeConf, localesConf } = require("./config/");
+const { mdConf, themeConf, localesConf, headConf } = require("./config/");
 
 module.exports = {
   locales: localesConf,
   markdown: mdConf,
   themeConfig: themeConf,
+  head: headConf,
   plugins: [
     require("./plugins/my-router"),
     require("./plugins/my-loader"),
