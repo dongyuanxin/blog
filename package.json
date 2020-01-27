@@ -26,8 +26,8 @@
     "check:notes": "node bin/prettier.js -t notes -c",
     "lint:notes": "node bin/prettier.js -t notes -l",
     "start": "npm run dev",
-    "dev": "nodemon --watch docs bin/sidebar.js & ./node_modules/.bin/vuepress dev .",
-    "build": "node bin/sidebar.js && ./node_modules/.bin/vuepress build ."
+    "dev": "./node_modules/.bin/vuepress dev .",
+    "build": "./node_modules/.bin/vuepress build ."
   },
   "repository": {
     "type": "git",
