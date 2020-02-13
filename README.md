@@ -26,13 +26,14 @@ footer: MIT Licensed | Copyright © 2019 心谭
 
 ### 深入 nodejs 模块
 
-- `[事件机制]` [NodeJS 模块研究:events](https://xxoo521.com/2020-01-10-nodejs-events/)
-- `[二进制]` [NodeJS 模块研究:Buffer](https://xxoo521.com/2020-01-17-buffer/)
+- `[事件机制]` [NodeJS 模块研究 - events](https://xxoo521.com/2020-01-10-nodejs-events/)
+- `[二进制]` [NodeJS 模块研究 - Buffer](https://xxoo521.com/2020-01-17-buffer/)
+- `[流]` [NodeJS 模块研究 - stream](https://xxoo521.com/2020-01-28-stream/)
 - `[操作系统]` [NodeJS 模块研究:os](https://xxoo521.com/2020-01-11-nodejs-os/)
 - `[数据加密]` [NodeJS 模块研究 - crypto](https://xxoo521.com/2020-01-21-crypto/)
 - `[数据压缩]` [NodeJS 模块研究 - zlib](https://xxoo521.com/2020-01-26-zlib/)
-- `[文件系统]` [NodeJS 模块研究:path](https://xxoo521.com/2020-01-09-nodejs-path/)
-- `[文件系统]` [NodeJS 模块研究:fs](https://xxoo521.com/2020-01-15-fs/)
+- `[文件系统]` [NodeJS 模块研究 - path](https://xxoo521.com/2020-01-09-nodejs-path/)
+- `[文件系统]` [NodeJS 模块研究 - fs](https://xxoo521.com/2020-01-15-fs/)
 - `[多进程]` [NodeJS 模块研究 - process](https://xxoo521.com/2020-01-19-process/)
 - `[多进程]` [NodeJS 模块研究 - child_process](https://xxoo521.com/2020-01-25-child-process/)
 - `[多进程]` [NodeJS 模块研究 - cluster](https://xxoo521.com/2020-01-27-cluster/)
