@@ -46,14 +46,14 @@ function main() {
     });
   });
 
-  const notesJs = mapTocToSidebar(notesRoot);
-  if (notesJs.length) {
-    variables.push({
-      path: "/notes/",
-      name: "notes",
-      js: notesJs
-    });
-  }
+  // const notesJs = mapTocToSidebar(notesRoot);
+  // if (notesJs.length) {
+  //   variables.push({
+  //     path: "/notes/",
+  //     name: "notes",
+  //     js: notesJs
+  //   });
+  // }
 
   fs.writeFileSync(sidebarPath, ejs.render(template, { variables }));
 }

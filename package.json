@@ -15,19 +15,16 @@
     "ora": "^3.4.0",
     "prettier": "^1.17.1",
     "tracer": "^1.0.1",
-    "vuepress": "^1.2.0",
+    "vuepress": "^1.5.0",
     "vuepress-plugin-comment": "^0.5.4",
     "vuepress-plugin-viewer": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vuepress-plugin-table-of-contents": "^1.1.7"
+  },
   "scripts": {
-    "check": "node bin/prettier.js -t docs -c",
-    "lint": "node bin/prettier.js -t docs -l",
-    "check:notes": "node bin/prettier.js -t notes -c",
-    "lint:notes": "node bin/prettier.js -t notes -l",
-    "start": "npm run dev",
-    "dev": "./node_modules/.bin/vuepress dev .",
-    "build": "./node_modules/.bin/vuepress build ."
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
   },
   "repository": {
     "type": "git",
