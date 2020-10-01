@@ -1,39 +1,39 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "集博客之精华而生的目录，已有前端知识体系梳理、设计模式手册、Webpack4教程，欢迎食用",
-  "main": "index.js",
-  "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.2.0",
-    "@vuepress/plugin-google-analytics": "^1.2.0",
-    "@vuepress/plugin-pwa": "^1.2.0",
-    "chalk": "^2.4.2",
-    "commander": "^3.0.0",
-    "ejs": "^2.7.1",
-    "husky": "^2.3.0",
-    "nodemon": "^1.19.2",
-    "ora": "^3.4.0",
-    "prettier": "^1.17.1",
-    "tracer": "^1.0.1",
-    "vuepress": "^1.5.0",
-    "vuepress-plugin-comment": "^0.5.4",
-    "vuepress-plugin-viewer": "^1.0.0"
-  },
-  "devDependencies": {
-    "vuepress-plugin-table-of-contents": "^1.1.7"
-  },
-  "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dongyuanxin/blog.git"
-  },
-  "author": "心谭",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dongyuanxin/blog/issues"
-  },
-  "homepage": "https://github.com/dongyuanxin/blog#readme"
+    "name": "blog",
+    "version": "1.0.0",
+    "description": "集博客之精华而生的目录，已有前端知识体系梳理、设计模式手册、Webpack4教程，欢迎食用",
+    "main": "index.js",
+    "dependencies": {
+        "@vuepress/plugin-back-to-top": "^1.2.0",
+        "@vuepress/plugin-google-analytics": "^1.2.0",
+        "@vuepress/plugin-pwa": "^1.2.0",
+        "chalk": "^2.4.2",
+        "commander": "^3.0.0",
+        "ejs": "^2.7.1",
+        "husky": "^2.3.0",
+        "nodemon": "^1.19.2",
+        "ora": "^3.4.0",
+        "prettier": "^1.17.1",
+        "tracer": "^1.0.1",
+        "vuepress": "1.5.0",
+        "vuepress-plugin-comment": "^0.5.4",
+        "vuepress-plugin-viewer": "^1.0.0"
+    },
+    "devDependencies": {
+        "vuepress-plugin-table-of-contents": "^1.1.7"
+    },
+    "scripts": {
+        "dev": "vuepress dev .",
+        "build": "vuepress build ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dongyuanxin/blog.git"
+    },
+    "author": "心谭",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dongyuanxin/blog/issues"
+    },
+    "homepage": "https://github.com/dongyuanxin/blog#readme"
 }

@@ -44,23 +44,31 @@ const docsSidebar = {
 const noteSidebar = {
     "/notes/": [
         {
-            title: "02.设计模式",
+            title: "设计模式",
             collapsable: true,
             sidebarDepth: 0,
             path: "/notes/02.设计模式/",
             children: [
                 {
-                    title: "1.创建型模式",
+                    title: "创建型模式",
                     collapsable: true,
                     sidebarDepth: 0,
                     children: [
                         {
-                            title: "3.行为型模型",
+                            title: "行为型模型",
                             collapsable: true,
                             sidebarDepth: 0,
                             children: [
                                 {
-                                    title: "1.策略模式",
+                                    title: "策略模式",
+                                    collapsable: true,
+                                    sidebarDepth: 0,
+                                    path:
+                                        "/notes/02.设计模式/1.创建型模式/3.行为型模式/1.策略模式/",
+                                    children: []
+                                },
+                                {
+                                    title: "策略模式",
                                     collapsable: true,
                                     sidebarDepth: 0,
                                     path:
@@ -72,18 +80,24 @@ const noteSidebar = {
                     ]
                 },
                 {
-                    title: "2.结构型模式",
+                    title: "结构型模式",
                     collapsable: true,
                     sidebarDepth: 0,
                     children: [
-                        [
-                            "02.设计模式/2.结构型模式/1.享元模式/readme.md",
-                            "单例模式"
-                        ],
-                        [
-                            "02.设计模式/2.结构型模式/2.代理模式/readme.md",
-                            "工厂模式"
-                        ]
+                        {
+                            title: "享元模式",
+                            collapsable: true,
+                            sidebarDepth: 0,
+                            path: "/notes/02.设计模式/2.结构型模式/1.享元模式/",
+                            children: []
+                        },
+                        {
+                            title: "代理模式",
+                            collapsable: true,
+                            sidebarDepth: 0,
+                            path: "/notes/02.设计模式/2.结构型模式/2.代理模式/",
+                            children: []
+                        }
                     ]
                 }
             ]
