@@ -24,3 +24,21 @@ main.home
   @media (min-width: $MQNarrow + 1px) {
     padding-right $sidebarWidth
   }
+
+// 侧边栏
+.sidebar 
+  span, a 
+    font-size 14px !important
+    font-weight 500 !important
+
+.sidebar > .sidebar-links 
+  padding 0 !important
+
+.sidebar-group.is-sub-group > .sidebar-heading:not(.clickable) 
+  opacity 0.6 !important
+
+.sidebar span.arrow 
+  cursor pointer
+
+.sidebar-links > li 
+  margin-top 0 !important
