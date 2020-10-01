@@ -39,8 +39,11 @@ export default {
             this.refreshIndex();
         }
     },
-    created() {
-        // this.refreshIndex();
+    // created() {
+    //     // this.refreshIndex();
+    //     this.loadStorage();
+    // },
+    mounted() {
         this.loadStorage();
     },
     methods: {
