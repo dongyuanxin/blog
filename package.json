@@ -20,6 +20,9 @@
         "vuepress-plugin-viewer": "^1.0.0"
     },
     "devDependencies": {
+        "execa": "^4.0.3",
+        "node-cron": "^2.0.3",
+        "vuepress-plugin-feed": "^0.1.8",
         "vuepress-plugin-table-of-contents": "^1.1.7"
     },
     "scripts": {
