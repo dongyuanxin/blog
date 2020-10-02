@@ -40,12 +40,6 @@ module.exports = {
                         "<%- frontmatter.title %>：<%- window.location.origin %><%- frontmatter.to.path || window.location.pathname %>"
                 }
             }
-        ],
-        [
-            "feed",
-            {
-                canonical_base: "https://xin-tan.com"
-            }
         ]
     ]
 };
