@@ -11,28 +11,9 @@
 
         <div class="right-sidebar-links">
             <div class="right-sidebar-header">
-                本文目录
+                目录
             </div>
             <TOC />
-        </div>
-
-        <div class="right-sidebar-links">
-            <div class="right-sidebar-header">
-                最近更新
-                <a href="/guide/" target="_blank">&gt;&gt;&gt;查看全部</a>
-            </div>
-            <div
-                class="right-sidebar-item"
-                v-for="(article, index) in relatedPosts"
-                :key="index"
-            >
-                <a
-                    target="_blank"
-                    :href="article.path"
-                    :title="article.title"
-                    >{{ article.title }}</a
-                >
-            </div>
         </div>
     </aside>
 </template>
