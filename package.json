@@ -21,6 +21,7 @@
     },
     "devDependencies": {
         "execa": "^4.0.3",
+        "js-yaml": "^3.14.0",
         "node-cron": "^2.0.3",
         "vuepress-plugin-table-of-contents": "^1.1.7"
     },
