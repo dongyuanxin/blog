@@ -9,7 +9,6 @@ const ROOT_PATH = path.resolve(process.cwd(), "notes");
 function getSidebar() {
     const toc = [];
     scan(ROOT_PATH, toc);
-    console.log(">>> toc is", toc[8].children[14].children[2]);
     return {
         "/notes/": toc
     };
