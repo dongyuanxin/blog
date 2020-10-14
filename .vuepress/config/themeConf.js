@@ -20,5 +20,6 @@ module.exports = {
             link: "https://xxoo521.com/algorithm/"
         }
     ],
-    sidebar: getSidebar()
+    sidebar: getSidebar(),
+    searchMaxSuggestions: 15
 };
