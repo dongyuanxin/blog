@@ -8,16 +8,20 @@ module.exports = {
     lastUpdated: "更新于",
     nav: [
         {
-            text: "技能图谱",
+            text: '更新日志',
+            link: '/changelog/'
+        },
+        {
+            text: "笔记归档",
             link: "/notes/"
         },
         {
             text: "前端图谱",
-            link: "https://xxoo521.com/frontend/"
+            link: "/frontend/"
         },
         {
             text: "算法题解",
-            link: "https://xxoo521.com/algorithm/"
+            link: "/algorithm/"
         }
     ],
     sidebar: getSidebar(),

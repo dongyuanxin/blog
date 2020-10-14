@@ -3,11 +3,9 @@ module.exports = {
     extendPageData($page) {
         const { frontmatter, regularPath } = $page;
 
-        if (/^\/?notes\//.test(regularPath)) {
-            frontmatter.comment = false;
-        }
+        frontmatter.comment = false;
+
         if (/^\/?docs\//.test(regularPath)) {
-            frontmatter.comment = true;
             frontmatter.commentid = frontmatter.permalink;
             frontmatter.permalink = `/passages/${frontmatter.permalink}`;
         }

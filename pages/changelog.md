@@ -1,7 +1,7 @@
 ---
-title: "导航"
-permalink: "guide"
-comment: true
+title: "更新日志"
+permalink: "changelog"
+comment: false
 single: true
 ---
 
@@ -54,20 +54,24 @@ export default {
 
       return this.posts
         .filter(post => {
-          const { frontmatter } = post;
-          return frontmatter && frontmatter.permalink && frontmatter.title;
+          const { frontmatter, relativePath = '' } = post;
+          return relativePath.includes('notes/') && frontmatter && frontmatter.permalink && frontmatter.title;
         })
         .map(post => {
           const execs = re.exec(post.relativePath)
           return {
             ...post,
-            updateTimestamp: (new Date(post.lastUpdated || post.frontmatter.date)).getTime(),
+            updateTimestamp: (new Date(this.formatUpdateDateStr(post.frontmatter.date || post.lastUpdated))).getTime(),
             filename: execs ? execs['1'] : '',
-            formatDay: this.formatDate(new Date(post.lastUpdated || post.frontmatter.date))
+            formatDay: this.formatDate(new Date(this.formatUpdateDateStr(post.frontmatter.date || post.lastUpdated)))
           }
         })
         .sort((a, b) => b.updateTimestamp - a.updateTimestamp)
         .slice(0, num)
+    },
+
+    formatUpdateDateStr(updateStr) {
+      return updateStr.slice(0, 10).replace(/\//g, '-')
     },
     
     formatDate(date) {
