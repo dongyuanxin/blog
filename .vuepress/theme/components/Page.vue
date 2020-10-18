@@ -1,16 +1,28 @@
 <template>
-  <main class="page">
-    <slot name="top" />
+    <main class="page">
+        <slot name="top" />
 
-    <Content class="theme-default-content" />
-    <PageEdit />
+        <Content class="theme-default-content" />
+        <div style="display: none;">
+            来自:
+            <a
+                :href="
+                    `https://xin-tan.com/${this.$frontmatter.permalink || '/'}`
+                "
+                target="_blank"
+                >{{ this.$title }}</a
+            ><br />
+            作者：<a href="https://xin-tan.com" target="_blank">心谭</a><br />
+            Star仓库：<a href="https://github.com/dongyuanxin/blog">github</a>
+        </div>
+        <PageEdit />
 
-    <PageNav v-bind="{ sidebarItems }" />
+        <PageNav v-bind="{ sidebarItems }" />
 
-    <RightSidebar />
+        <RightSidebar />
 
-    <slot name="bottom" />
-  </main>
+        <slot name="bottom" />
+    </main>
 </template>
 
 <script>
@@ -19,8 +31,8 @@ import PageNav from "@theme/components/PageNav.vue";
 import RightSidebar from "./RightSidebar";
 
 export default {
-  components: { PageEdit, PageNav, RightSidebar },
-  props: ["sidebarItems"]
+    components: { PageEdit, PageNav, RightSidebar },
+    props: ["sidebarItems"]
 };
 </script>
 
